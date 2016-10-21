@@ -7,6 +7,6 @@
 <title>welcome</title>
 </head>
 <body>
-<a href="www.baidu.com">登陆</a>
+<a href="login.action">登陆</a>
 </body>
 </html>
