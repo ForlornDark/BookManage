@@ -7,6 +7,6 @@
 <title>welcome</title>
 </head>
 <body>
-欢迎使用,更改的内容。
+<a href="www.baidu.com">登陆</a>
 </body>
 </html>
