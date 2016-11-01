@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>登录页面</title>
+<title>login</title>
 <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="css/login.css" />
 <script type="text/javascript" src="js/login.js"></script>
@@ -22,7 +22,7 @@
 		<s:form theme="simple" action="login" method="post" onsubmit="return check()">
 		<p style="padding: 30px 0px 10px; position: relative;">
 			<span class="u_logo"></span> 
-			<input class="ipt" id="id" type="text" placeholder="请输入ID" name="user.name">
+			<input class="ipt" id="id" type="text" pattern="^[0-9]*$" placeholder="请输入数字ID" name="user.id">
 		</p>
 		<p style="position: relative;">
 			<span class="p_logo"></span> 
@@ -45,7 +45,7 @@
 	</div>
 	<div style="text-align: center;margin-top:20px">
 		<p>
-			技术支持:<a href="#" target="_blank">APAE</a>
+			技术支持:<a href="http://blog.sina.com.cn/u/5342604843" target="_blank">APAE</a>
 		</p>
 	</div>
 </BODY>
