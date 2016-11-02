@@ -8,5 +8,8 @@
     			<result name="success">/index.jsp</result>
     			<result name="error">/login.jsp</result>
     		</action>
+    		<action name="queryBook" class="com.book.manage.action.BookQuery">
+    			<result name="success">/book_query.jsp</result>
+    		</action>
     	</package>
     </struts>

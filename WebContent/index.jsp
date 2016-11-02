@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="js/index.js"></script>
 <title>welcome</title>
 </head>
 <body>
@@ -13,12 +14,11 @@
 	<a href="login.jsp">管理员登陆</a>
 </div>
 <div>
-	<span>借阅查询</span>
-	<span>图书查询</span>
-	<span>关于</span>
+	<span onclick="openUrl('lend_query.jsp')">借阅查询</span>
+	<span onclick="openUrl('book_query.jsp')">图书查询</span>
+	<span id="about" onclick="openUrl('about.html');">关于</span>
 </div>
-<iframe id="container" width="100%" height="*">
-这是内容
+<iframe id="container" width="100%" height="500px" src="book_query.jsp">
 </iframe>
 </body>
 </html>
