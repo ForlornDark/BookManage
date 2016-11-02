@@ -5,7 +5,7 @@
     <struts>
     	<package name="book.manage" extends="struts-default">
     		<action name="login" class="com.book.manage.action.LoginAction">
-    			<result name="success">/index.jsp</result>
+    			<result name="success">/index_manager.jsp</result>
     			<result name="error">/login.jsp</result>
     		</action>
     		<action name="queryBook" class="com.book.manage.action.BookQuery">

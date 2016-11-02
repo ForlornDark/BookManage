@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>login</title>
-<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="css/login.css" />
 <script type="text/javascript" src="js/login.js"></script>
 </head>

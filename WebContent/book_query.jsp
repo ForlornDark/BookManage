@@ -14,8 +14,6 @@
 			<span style="color:#ff0000;" id="msg"></span><input id="bookname" autocomplete="off" placeholder="输入书名或作者" name="param">
 			<s:submit value="提交"></s:submit>
 		</s:form>
-		
-	
 	</div>
 	<div>
 		<table>
@@ -50,7 +48,6 @@
 				</tr>
 			</s:elseif>
 		</table>
-		<s:debug></s:debug>
 	</div>
 </body>
 </html>

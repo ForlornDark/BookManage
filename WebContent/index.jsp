@@ -9,8 +9,10 @@
 <title>welcome</title>
 </head>
 <body>
-<h2>图书管理系统</h2>
 <div>
+<h1>图书管理系统</h1>
+</div>
+<div >
 	<a href="login.jsp">管理员登陆</a>
 </div>
 <div>
