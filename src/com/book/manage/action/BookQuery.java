@@ -6,11 +6,12 @@ import com.book.manage.bean.Book;
 import com.book.manage.dao.BookDao;
 import com.opensymphony.xwork2.ActionSupport;
 
+/**
+ * @author lfm
+ *
+ */
 public class BookQuery extends ActionSupport{
 	private List<Book> list;
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private String param =null;
 	@Override

@@ -9,6 +9,10 @@ import com.book.manage.bean.Book;
 import com.book.manage.utils.QueryRunner;
 import com.book.manage.utils.ResultSetHandler;
 
+/**
+ * @author lfm
+ *
+ */
 public class BookDao {
 	
 	public List<Book> queryByNaAu(String param) throws SQLException{
