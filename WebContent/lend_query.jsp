@@ -40,18 +40,17 @@
 					<td><s:property value="top.book.publisher"/><td>
 					<td><s:property value="top.book.price"/><td>
 					<td><s:property value="top.num"/><td>
-					<td><s:property value="top.time"/><td>
+					<td><s:date name="top.time" format="yyyy年MM月dd日"/><td>
 			<!--  		<td><s:property value="top.photo"/><td> -->
 				</tr>
 				</s:iterator>
 			</s:if>
-			<s:elseif test="param!=null">
+			<s:elseif test="id!=null">
 				<tr>
 					<td>没有查询结果<td>
 				</tr>
 			</s:elseif>
 		</table>
-		<s:debug></s:debug>
 	</div>
 </body>
 </html>

@@ -3,6 +3,7 @@ package com.book.manage.action;
 import java.util.List;
 
 import com.book.manage.bean.Lend;
+import com.book.manage.dao.LendDao;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -21,6 +22,8 @@ public class LendQuery extends ActionSupport{
 	@Override
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
+		int i = Integer.parseInt(id);
+		list = new LendDao().queryById(i);
 		return super.execute();
 	}
 	public List<Lend> getList() {
