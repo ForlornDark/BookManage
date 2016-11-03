@@ -14,7 +14,7 @@ body {
 	position: absolute;
 	top: 0px;
 	width: 100%;
-	height: 20px;
+	height: 30px;
 	text-align: center;
 	color: #FFFFFF;
 	font-size: 17px;
@@ -34,9 +34,9 @@ body {
 
 .top2 {
 	position: absolute;
-	top: 20px;
+	top: 30px;
 	width: 100%;
-	height: 77px;
+	height: 90px;
 	text-align: center;
 	color: #ccffff;
 	background-color: #008EAD;
@@ -45,7 +45,7 @@ body {
 .left {
 	position: absolute;
 	left: 0px;
-	top: 97px;
+	top: 120px;
 	width: 200px;
 	height: 85%;
 	border-right: 1px solid #9370DB;
@@ -58,7 +58,7 @@ body {
 .right {
 	position: absolute;
 	left: 200px;
-	top: 97px;
+	top: 120px;
 	width: 85.2%;
 	height: 85%;
 	border-top: 0px solid #484860;

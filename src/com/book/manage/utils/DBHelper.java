@@ -10,10 +10,18 @@ import java.util.Properties;
 
 public class DBHelper {
 	private static Properties pro=null;
+	private static String url;
+	private static String user;
+	private static String password;
+	private static String driver;
 	static{
 		pro=new Properties();
 		try {
 			pro.load(new FileReader(DBHelper.class.getClassLoader().getResource("config.properties").getPath()));
+			url = pro.getProperty("url");
+			user = pro.getProperty("user");
+			password = pro.getProperty("password");
+			Class.forName(pro.getProperty("driver"));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -24,16 +32,7 @@ public class DBHelper {
 		
 	}
 	public static Connection getConnection() throws SQLException{
-		
-		try {
-			Class.forName(pro.getProperty("driver"));
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			new RuntimeException();
-		}
-		
-		Connection conn=DriverManager.getConnection(pro.getProperty("url"), pro.getProperty("user"),pro.getProperty("password"));
+		Connection conn=DriverManager.getConnection(url, user,password);
 		return conn;
 		
 	}

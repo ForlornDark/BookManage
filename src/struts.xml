@@ -14,5 +14,8 @@
     		<action name="queryLend" class="com.book.manage.action.LendQuery">
     			<result name="success">/lend_query.jsp</result>
     		</action>
+    		<action name="lendBook" class="com.book.manage.action.LendBook">
+    			<result name="success">/lend_book.jsp</result>
+    		</action>
     	</package>
     </struts>

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix="s" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,34 +12,44 @@
     <link rel="stylesheet" type="text/css" href="css/lend_book.css">
 </head>
 <body>
-<form class="form-inline definewidth m20" action="#" method="post">
-     <font color="#777777"><strong>借阅号</strong></font>
-    <input type="text" name="menuname" id="menuname"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;
-    <font color="#777777"><strong>ISBN</strong></font>
-    <input type="text" name="menuname" id="menuname"class="abc input-default" placeholder="" value="">
-    <font color="#777777"><strong>数量</strong></font>
-    <input type="text" name="menuname" id="menuname"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;
-    <button type="submit" class="btn btn-primary">查询</button> 
+<form class="form-inline definewidth m20" action="lendBook" method="post">
+     <font color="#777777"><strong>借阅号：</strong></font>
+    <input autocomplete="off" type="number" name="lend.readerId" class="abc input-default" placeholder="数字ID" >&nbsp;&nbsp;
+    <font color="#777777"><strong>ISBN：</strong></font>
+    <input autocomplete="off" type="text" name="lend.ISBN" class="abc input-default" placeholder="978-7-121-25457-4">
+    <font color="#777777"><strong>数量：</strong></font>
+    <input autocomplete="off" type="number" name="lend.num" class="abc input-default" placeholder="数字">&nbsp;&nbsp;
+    <button type="submit" class="btn btn-primary">借书</button><span class="msg"></span>
 </form>
 <table class="table table-bordered table-hover definewidth m10">
-	<caption><h2>查询结果</h2></caption>
+	<caption><h2>借书记录</h2></caption>
     <thead>
     <tr>
         <th>ISBN</th>
-        <th>姓名</th>
+        <th>借阅号</th>
         <th>书名</th>
         <th>时间</th>
 		<th>数量</th>
      </tr>
     </thead>
-        <tr>
-                <td>978-12-1231-132-1</td>
-                <td>刘福名</td>
-                <td>计算机网络</td>
-                <td>2016-11-2</td>
-                <td>5</td>
-			<!-- <td><button type="submit">注销</button></td> -->
+       
+        <s:if test="#map['error']!=null">
+         <tr>
+        	<td colspan="5" style="color:#ff0000;text-align:center ;border-collapse:collapse;"><s:property value="#map['error']"></s:property></td>
         </tr>
+        </s:if>
+        <s:else>
+        	<s:iterator value="#map['result']">
+        	<tr>
+        		<td><s:property value="top.isbn"></s:property></td>
+                <td><s:property value="top.readerId"></s:property></td>
+                <td><s:property value="top.book.bookName"></s:property></td>
+                <td><s:date name="top.time" format="yyyy年MM月dd日"/></td>
+                <td><s:property value="top.num"></s:property></td>
+            </tr>
+        	</s:iterator>
+        </s:else>
        </table>
+       <s:debug></s:debug>
 </body>
 </html>
