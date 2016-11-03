@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix ="s" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -15,14 +16,15 @@
 	</div>
 	<div class="top2">
 		<div class="logo">
-			<img src="images/admin_logo.png" title="在哪儿" />
+			<img src="images/admin_logo.png" title="logo" />
 		</div>
 		<div class="title">
 			<h3>图书管理系统</h3>
 		</div>
 		<div class="fr top-link">
-			<a href="#" target="mainCont" title="FolornDark"><i
-				class="adminIcon"></i><span>管理员：ForlornDark</span></a>
+		<s:iterator value="#session.values">
+			<a href="#" target="mainCont" title="${top.name }"><i
+				class="adminIcon"></i><span>管理员：<s:property value="top.name"/></span></a></s:iterator>
 		</div>
 	</div>
 
@@ -41,13 +43,13 @@
 			<div class="div3">
 				<ul>
 					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('videoQuery.html');">借书</a></li>
+						onClick="openurl('lend_book.jsp');">借书</a></li>
 					<li><a class="a" href="javascript:void(0);"
 						onClick="openurl('uservideoQuery.html');">还书</a></li>
 				</ul>
 			</div>
 			<div class="div2">
-				<div class="spgl"></div>
+				<div class="yhgl"></div>
 				查询
 			</div>
 			<div class="div3">
@@ -61,7 +63,7 @@
 				</ul>
 			</div>
 			<div class="div2">
-				<div class="spgl"></div>
+				<div class="gggl"></div>
 				添加
 			</div>
 			<div class="div3">
@@ -73,7 +75,7 @@
 				</ul>
 			</div>
 			<div class="div2">
-				<div class="tcht"></div>
+				<div class="zlgl"></div>
 				<a class="a1" href="index.jsp">退出后台</a>
 			</div>
 		</div>

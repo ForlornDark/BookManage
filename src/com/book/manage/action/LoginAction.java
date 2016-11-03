@@ -1,7 +1,10 @@
 package com.book.manage.action;
 
+import java.util.Map;
+
 import com.book.manage.bean.User;
 import com.book.manage.dao.UserDao;
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -25,6 +28,8 @@ public class LoginAction extends ActionSupport {
 			setMsg("’ÀªßªÚ√‹¬Î¥ÌŒÛ");
 			return "error";
 		}
+		Map<String, Object> map = ActionContext.getContext().getSession();
+		map.put(String.valueOf(u.getId()), u);
 		return "success";
 	}
 	public User getUser() {

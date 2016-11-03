@@ -20,7 +20,7 @@ body {
 	font-size: 17px;
 	font-height: 20px;
 	font-family: 楷体;
-	background-color: #888888
+	background-color: #008EAD
 }
 
 .title {
@@ -39,7 +39,7 @@ body {
 	height: 77px;
 	text-align: center;
 	color: #ccffff;
-	background-color: #888888
+	background-color: #008EAD;
 }
 
 .left {
@@ -52,7 +52,7 @@ body {
 	color: #000000;
 	font-size: 20px;
 	text-align: center;
-	background-color: #B3B3B3
+	background-color: #009999
 }
 
 .right {
@@ -90,6 +90,7 @@ body {
 	line-height: 40px;
 	cursor: pointer;
 	font-size: 18px;
+	color:#ffffff;
 	position: relative;
 	border-bottom: #ccc 0px dotted;
 }
@@ -109,7 +110,7 @@ body {
 	width: 20px;
 	left: 40px;
 	top: 10px;
-	background: url(../images/4.png);
+	background: url(../images/2.png);
 }
 
 .gggl {
@@ -127,7 +128,7 @@ body {
 	width: 20px;
 	left: 40px;
 	top: 10px;
-	background: url(../images/4.png);
+	background: url(../images/8.png);
 }
 
 .pjgl {
@@ -169,13 +170,13 @@ body {
 
 .a {
 	text-decoration: none;
-	color: #000000;
+	color: #ffffff;
 	font-size: 15px;
 }
 
 .a1 {
 	text-decoration: none;
-	color: #000000;
+	color: #ffffff;
 	font-size: 18px;
 }
 /*public*/
