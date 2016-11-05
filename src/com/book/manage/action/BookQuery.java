@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.book.manage.bean.Book;
 import com.book.manage.dao.BookDao;
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -18,6 +19,8 @@ public class BookQuery extends ActionSupport{
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
 		list = new BookDao().queryByNaAu(param);
+		if(list.size()==0)
+			ActionContext.getContext().put("msg", "ÎÞËÑË÷½á¹û");
 		return super.execute();
 	}
 	

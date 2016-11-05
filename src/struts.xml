@@ -20,5 +20,11 @@
     		<action name="backBook" class="com.book.manage.action.BackBook">
     			<result name="success">/back_book.jsp</result>
     		</action>
+    		<action name="queryBookManager" class="com.book.manage.action.BookQuery">
+    			<result name="success">/book_query_manager.jsp</result>
+    		</action>
+    		<action name="deleteBook" class="com.book.manage.action.DeleteBook">
+    			<result name="success">/book_query_manager.jsp</result>
+    		</action>
     	</package>
     </struts>

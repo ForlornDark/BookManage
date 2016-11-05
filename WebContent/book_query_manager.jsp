@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib uri="/struts-tags" prefix="s" %>
+<%@ taglib uri="/struts-tags" prefix="s" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +14,7 @@
 </head>
 <body>
 	<div>
-		<s:form class="form-inline definewidth m20" action="queryBook" method ="post" onsubmit="return check();">
+		<s:form class="form-inline definewidth m20" action="queryBookManager" method ="post" onsubmit="return check();">
 			<font color="#777777"><strong>书名或作者：</strong></font>
 			<input type="text" class="abc input-default" autocomplete="off" placeholder="输入书名或作者" name="param">
 			&nbsp;&nbsp;<button type="submit" class="btn btn-primary">查询</button>
@@ -34,6 +34,7 @@
 				<th>总量</th>
 				<th>剩余量</th>
 				<th>书标</th>
+				<th>操作</th>
 			</tr>
 			</thead>
 			<s:if test="list!=null&&list.size>0">
@@ -46,13 +47,15 @@
 					<td><s:property value="top.price"/></td>
 					<td><s:property value="top.cnum"/></td>
 					<td><s:property value="top.snum"/></td>
-				<!-- 	<td><s:property value="top.photo"/><td>
-				--></tr>
+				 	<td><!--<s:property value="top.photo"/><td>-->
+				 	
+				 	<td><a href="deleteBook.action?ISBN=${top.ISBN }">删除</a></td>
+				</tr>
 				</s:iterator>
 			</s:if>
-			<s:elseif test="param!=null">
+			<s:elseif test="#msg!=null">
 				<tr>
-					<td colspan="8" style="color:#ff0000;text-align:center ;border-collapse:collapse;">没有记录</td>
+					<td colspan="8" style="color:#ff0000;text-align:center ;border-collapse:collapse;"><s:property value="msg"/></td>
 				</tr>
 			</s:elseif>
 		</table>

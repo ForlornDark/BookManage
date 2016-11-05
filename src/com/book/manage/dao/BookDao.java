@@ -14,10 +14,11 @@ import com.book.manage.utils.ResultSetHandler;
  *
  */
 public class BookDao {
-	
+	QueryRunner runner =null;
 	public List<Book> queryByNaAu(String param) throws SQLException{
 		String sql = "select * from book where bookname=? or author=?";
-		QueryRunner runner = new QueryRunner();
+		if(runner ==null)
+		runner = new QueryRunner();
 		List<Book> list = runner.query(sql, new ResultSetHandler<List<Book>>(){
 
 			@Override
@@ -26,7 +27,7 @@ public class BookDao {
 				List<Book> list = new ArrayList<Book>();
 				while(set.next()){
 					Book b =new Book();
-					b.setIsbn(set.getString(1));
+					b.setISBN(set.getString(1));
 					b.setBookName(set.getString(2));
 					b.setAuthor(set.getString(3));
 					b.setPublisher(set.getString(4));
@@ -39,5 +40,11 @@ public class BookDao {
 				return list;
 			}}, param,param);
 		return list;
+	}
+	public int deleteBookByISBN(String ISBN) throws SQLException{
+		String sql = "delete from book where isbn = ?";
+		if(runner ==null)
+			runner = new QueryRunner();
+		return runner.update(sql, ISBN);
 	}
 }

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="/struts-tags" prefix ="s" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -57,7 +57,7 @@
 					<li><a class="a" href="javascript:void(0);"
 						onClick="openurl('lend_query.jsp');">借书查询</a></li>
 					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('book_query.jsp');">图书查询</a></li>
+						onClick="openurl('book_query_manager.jsp');">图书查询</a></li>
 					<li><a class="a" href="javascript:void(0);"
 						onClick="openurl('userdocumentQuery.html');">读者查询</a></li>
 				</ul>

@@ -7,7 +7,7 @@ import java.sql.Blob;
  *
  */
 public class Book{
-	private String isbn;
+	private String ISBN;
 	private String bookName;
 	private String bookId;
 	private String author;
@@ -20,11 +20,12 @@ public class Book{
 	private String summary;
 	//图书封面图片路径，以图片格式存储在web/inf/resources下
 	private String path;
-	public String getIsbn() {
-		return isbn;
+	
+	public String getISBN() {
+		return ISBN;
 	}
-	public void setIsbn(String isbn) {
-		this.isbn = isbn;
+	public void setISBN(String ISBN) {
+		this.ISBN = ISBN;
 	}
 	public String getBookName() {
 		return bookName;

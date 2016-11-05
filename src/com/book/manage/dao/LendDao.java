@@ -33,8 +33,8 @@ public class LendDao {
 				while(set.next()){
 					Lend l = new Lend();
 					Book b = new Book();
-					b.setIsbn(set.getString(1));
-					l.setISBN(b.getIsbn());
+					b.setISBN(set.getString(1));
+					l.setISBN(b.getISBN());
 					b.setBookName(set.getString(2));
 					b.setAuthor(set.getString(3));
 					b.setPublisher(set.getString(4));
@@ -142,8 +142,8 @@ public class LendDao {
 				while(set.next()){
 					Lend l = new Lend();
 					Book b = new Book();
-					b.setIsbn(set.getString(1));
-					l.setISBN(b.getIsbn());
+					b.setISBN(set.getString(1));
+					l.setISBN(b.getISBN());
 					b.setBookName(set.getString(2));
 					b.setAuthor(set.getString(3));
 					b.setPublisher(set.getString(4));
