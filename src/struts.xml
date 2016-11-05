@@ -17,5 +17,8 @@
     		<action name="lendBook" class="com.book.manage.action.LendBook">
     			<result name="success">/lend_book.jsp</result>
     		</action>
+    		<action name="backBook" class="com.book.manage.action.BackBook">
+    			<result name="success">/back_book.jsp</result>
+    		</action>
     	</package>
     </struts>

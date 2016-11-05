@@ -45,7 +45,7 @@
 					<li><a class="a" href="javascript:void(0);"
 						onClick="openurl('lend_book.jsp');">借书</a></li>
 					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('uservideoQuery.html');">还书</a></li>
+						onClick="openurl('back_book.jsp');">还书</a></li>
 				</ul>
 			</div>
 			<div class="div2">

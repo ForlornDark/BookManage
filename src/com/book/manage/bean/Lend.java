@@ -14,6 +14,7 @@ public class Lend {
 	private Date time;
 	private int num;
 	private Book book;
+	private Boolean isBack;
 	public int getLenId() {
 		return lenId;
 	}
@@ -49,6 +50,12 @@ public class Lend {
 	}
 	public void setBook(Book book) {
 		this.book = book;
+	}
+	public Boolean getIsBack() {
+		return isBack;
+	}
+	public void setIsBack(Boolean isBack) {
+		this.isBack = isBack;
 	}
 	
 }
