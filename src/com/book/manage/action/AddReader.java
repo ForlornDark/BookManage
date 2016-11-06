@@ -1,6 +1,9 @@
 package com.book.manage.action;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
 import com.book.manage.bean.Reader;
 import com.book.manage.dao.ReaderDao;
 import com.book.manage.utils.DateUtil;
@@ -27,6 +30,17 @@ public class AddReader extends ActionSupport{
 	@Override
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
+//		File file = new File("tupian.jpg");
+//		FileInputStream fis = new FileInputStream(photo);
+//		FileOutputStream fos = new FileOutputStream(file);
+//		System.out.println(photo.getAbsolutePath());
+//		System.out.println(file.getAbsolutePath());
+//		byte[] b = new byte[1024];
+//		int len = 0;
+//		while ((len = fis.read(b)) > 0)
+//			fos.write(b, 0, len);
+//		fis.close();
+//		fos.close();
 		reader.setBorn(DateUtil.parse(year+"-"+month+"-"+day));
 		ReaderDao dao= new ReaderDao();
 		dao.addReader(reader);

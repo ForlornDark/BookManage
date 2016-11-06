@@ -33,6 +33,7 @@ public class SaveFile {
 				builder.append('/');
 				builder.append(feature.charAt(i));
 				f = new File(builder.toString());
+				if(feature.charAt(i+1) != '.')
 				if(!f.exists())
 					f.mkdirs();
 			}
@@ -48,6 +49,7 @@ public class SaveFile {
 			int len = 0;
 			while ((len = fis.read(b)) > 0)
 				fos.write(b, 0, len);
+			
 			fis.close();
 			fos.close();
 		} catch (IOException e) {
@@ -55,7 +57,7 @@ public class SaveFile {
 			e.printStackTrace();
 		}
 		System.out.println(path);
-		System.out.println(builder2.toString());
+		System.out.println(file.getAbsolutePath());
 		return builder2.toString();
 	}
 	public String getPath(String feature){
