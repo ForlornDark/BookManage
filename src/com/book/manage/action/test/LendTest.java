@@ -1,6 +1,8 @@
 package com.book.manage.action.test;
 
+import java.net.URL;
 import java.sql.SQLException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -44,7 +46,7 @@ public void testUpdate(){
 	}
 	System.out.println("完毕");
 }
-@Test
+
 public void testFor(){
 	List<Book> lists = new ArrayList<Book>();
 	for(int i = 0;i<5;i++){
@@ -60,4 +62,15 @@ public void testFor(){
 	b.setAuthor("改变后");
 	System.out.println(lists.get(0).getAuthor());
 }
+
+	public void testStringToDate(){
+	SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+	try {
+		Date d = format.parse("1996-5-15");
+		System.out.println(d.toString());
+	} catch (ParseException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	}
 }

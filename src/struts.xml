@@ -26,5 +26,13 @@
     		<action name="deleteBook" class="com.book.manage.action.DeleteBook">
     			<result name="success">/book_query_manager.jsp</result>
     		</action>
+    		<action name="addReader" class="com.book.manage.action.AddReader">
+    		<interceptor-ref name="fileUpload">
+    			<param name="allowedTypes">image/png,image/gif,image/jpeg</param>
+			</interceptor-ref>
+			<interceptor-ref name="basicStack"/>
+    			<result name="success">/add_reader.jsp</result>
+    		</action>
     	</package>
+    	
     </struts>

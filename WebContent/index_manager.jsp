@@ -69,9 +69,9 @@
 			<div class="div3">
 				<ul>
 					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('classQuery.html');">图书添加</a></li>
+						onClick="openurl('add_book.jsp');">图书添加</a></li>
 					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('classQuery.html');">读者添加</a></li>
+						onClick="openurl('add_reader.jsp');">读者添加</a></li>
 				</ul>
 			</div>
 			<div class="div2">

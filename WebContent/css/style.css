@@ -35,6 +35,9 @@ form{
     margin-left: 5px;
     color: red;
 }
+a{
+	hover:none;
+}
 /*1*/
 .table td input[type="checkbox"]{
     padding: 0;
