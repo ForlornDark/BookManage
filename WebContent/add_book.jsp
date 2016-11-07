@@ -12,33 +12,33 @@
     <link rel="stylesheet" type="text/css" href="css/lend_book.css">
 </head>
 <body>
-<form class="form-inline definewidth m20" action="addBook" method="post">
+<form class="form-inline definewidth m20" action="addBook" method="post" enctype="multipart/form-data">
 	<table class="table table-bordered table-hover definewidth m10">
 		<tr>
 			<td><font color="#777777"><strong>ISBN：&nbsp&nbsp</strong></font>
-    			<input autocomplete="off" type="number" name="lend.readerId" class="abc input-default" placeholder="978-7-121-25457-4" >
+    			<input autocomplete="off" type="text" name="book.ISBN" class="abc input-default" placeholder="978-7-121-25457-4" >
     		</td>
     		<td><font color="#777777"><strong>书名：</strong></font>
-    			<input autocomplete="off" type="number" name="lend.readerId" class="abc input-default" placeholder="图书名" >
+    			<input autocomplete="off" type="text" name="book.bookName" class="abc input-default" placeholder="图书名" >
     		</td>
     		<td><font color="#777777"><strong>作者：</strong></font>
-    			<input autocomplete="off" type="number" name="lend.readerId" class="abc input-default" placeholder="作者" >
+    			<input autocomplete="off" type="text" name="book.author" class="abc input-default" placeholder="作者" >
     		</td>
 		</tr>
 		<tr>
 			<td><font color="#777777"><strong>出版社：</strong></font>
-    			<input autocomplete="off" type="number" name="lend.readerId" class="abc input-default" placeholder="XXX出版社" >
+    			<input autocomplete="off" type="text" name="book.publisher" class="abc input-default" placeholder="XXX出版社" >
     		</td>
     		<td><font color="#777777"><strong>价格：</strong></font>
-    			<input autocomplete="off" type="number" name="lend.readerId" class="abc input-default" placeholder="默认为0" >
+    			<input autocomplete="off" type="text" name="book.price" class="abc input-default" placeholder="默认为0" >
     		</td>
     		<td><font color="#777777"><strong>数量：</strong></font>
-    			<input autocomplete="off" type="number" name="lend.readerId" class="abc input-default" placeholder="大于0" >
+    			<input autocomplete="off" type="number" name="book.cnum" class="abc input-default" placeholder="大于0" >
     		</td>
 		</tr>
 		<tr>
 			<td><font color="#777777"><strong>封&nbsp&nbsp面：&nbsp</strong></font>
-    			<input autocomplete="off" type="file" name="lend.readerId" class="abc input-default" >
+    			<input autocomplete="off" type="file" name="photo" class="abc input-default" >
     		</td>
     		<td><button type="submit" class="btn btn-primary">添加</button><span class="msg"></span>
     		</td>
@@ -59,23 +59,16 @@
 		<th>封面</th>
      </tr>
     </thead>
-       
-        <s:if test="#map['error']!=null">
-         <tr>
-        	<td colspan="5" style="color:#ff0000;text-align:center ;border-collapse:collapse;"><s:property value="#map['error']"></s:property></td>
-        </tr>
-        </s:if>
-        <s:else>
-        	<s:iterator value="#map['result']">
-        	<tr>
-        		<td><s:property value="top.isbn"></s:property></td>
-                <td><s:property value="top.readerId"></s:property></td>
-                <td><s:property value="top.book.bookName"></s:property></td>
-                <td><s:date name="top.time" format="yyyy年MM月dd日"/></td>
-                <td><s:property value="top.num"></s:property></td>
-            </tr>
-        	</s:iterator>
-        </s:else>
-       </table>
+      	<tr>
+      		<td><s:property value="book.ISBN"/></td>
+      		<td><s:property value="book.bookName"/></td>
+      		<td><s:property value="book.author"/></td>
+      		<td><s:property value="book.publisher"/></td>
+      		<td><s:property value="book.price"/></td>
+      		<td><s:property value="book.cnum"/></td>
+      		<td><s:property value="book.snum"/></td>
+      		<td><img src="${book.path}" width="20px" height="20px"></td>
+      	</tr> 
+      </table>
 </body>
 </html>

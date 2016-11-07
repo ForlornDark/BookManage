@@ -33,12 +33,6 @@ public class Book{
 	public void setBookName(String bookName) {
 		this.bookName = bookName;
 	}
-	public String getBookId() {
-		return bookId;
-	}
-	public void setBookId(String bookId) {
-		this.bookId = bookId;
-	}
 	public String getAuthor() {
 		return author;
 	}

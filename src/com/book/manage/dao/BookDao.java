@@ -47,4 +47,11 @@ public class BookDao {
 			runner = new QueryRunner();
 		return runner.update(sql, ISBN);
 	}
+	public int addBook(Book book) throws SQLException{
+		if(runner ==null)
+			runner = new QueryRunner();
+		String sql = "insert into book(isbn,bookname,author,publisher,price,cnum,snum,photo) values(?,?,?,?,?,?,?,?)";
+		int result = runner.update(sql, book.getISBN(),book.getBookName(),book.getAuthor(),book.getPublisher(),book.getPrice(),book.getCnum(),book.getSnum(),book.getPath());
+		return result;
+	}
 }
