@@ -1,6 +1,7 @@
 @CHARSET "UTF-8";
 body{
 	background:#008FAE;
+	background-repeat: no-repeat;
 }
 h1{
 	position:relative;
