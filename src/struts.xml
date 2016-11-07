@@ -33,6 +33,9 @@
 			<interceptor-ref name="basicStack"/>
     			<result name="success">/add_reader.jsp</result>
     		</action>
+    		<action name="queryReader" class="com.book.manage.action.QueryReader">
+    			<result name="success">/query_reader.jsp</result>
+    		</action>
     	</package>
     	
     </struts>

@@ -14,14 +14,21 @@ public class DBHelper {
 	private static String user;
 	private static String password;
 	private static String driver;
+	public static String relPath;
+	public static String logicPath;
+	public static String URL;
 	static{
 		pro=new Properties();
 		try {
 			pro.load(new FileReader(DBHelper.class.getClassLoader().getResource("config.properties").getPath()));
+			driver = pro.getProperty("driver");
 			url = pro.getProperty("url");
 			user = pro.getProperty("user");
 			password = pro.getProperty("password");
-			Class.forName(pro.getProperty("driver"));
+			relPath = pro.getProperty("relPath");
+			logicPath = pro.getProperty("logicPath");
+			URL = pro.getProperty("URL");
+			Class.forName(driver);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

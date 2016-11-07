@@ -59,7 +59,7 @@
 					<li><a class="a" href="javascript:void(0);"
 						onClick="openurl('book_query_manager.jsp');">图书查询</a></li>
 					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('userdocumentQuery.html');">读者查询</a></li>
+						onClick="openurl('query_reader.html');">读者查询</a></li>
 				</ul>
 			</div>
 			<div class="div2">

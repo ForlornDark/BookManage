@@ -11,18 +11,12 @@ import org.apache.struts2.ServletActionContext;
 
 public class SaveFile {
 	public static String save(File file,String feature){
-		String path = "";
+		String path = DBHelper.relPath;
 		StringBuilder builder2 =  new StringBuilder("/upload");
 		try {
-			URL url = ServletActionContext.getServletContext().getResource("WEB-INF/upload");
-			File f = null;
-			if (url == null) {
-				path = ServletActionContext.getServletContext().getResource("WEB-INF").getPath() + "upload";
-				f = new File(path);
+			File f = new File(path);
 				if (!f.exists())
 					f.mkdirs();
-			} else
-				path = url.getPath();
 			StringBuilder builder = new StringBuilder(path);
 			int i = 0;
 			for (i = 0; feature.charAt(i) != '.'; i++) {
