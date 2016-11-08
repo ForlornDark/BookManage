@@ -43,7 +43,7 @@
     		<td><font color="#777777"><strong>照片：</strong></font>
     			<input autocomplete="off" type="file" name="photo" class="abc input-default" >
     		</td>
-    		<td><button type="submit" class="btn btn-primary">添加</button><span class="msg"></span>
+    		<td><button type="submit" class="btn btn-primary">注册</button><span class="msg"></span>
     		</td>
 		</tr>
 		
@@ -64,7 +64,7 @@
         	<tr>
         		<td><s:property value="reader.readerId"></s:property></td>
                 <td><s:property value="reader.name"></s:property></td>
-                <td><s:if test="reader.sex==0">女</s:if><s:else>男</s:else></td>
+                <td><s:if test="reader.sex==0">女</s:if><s:elseif test="reader.sex==1">男</s:elseif></td>
                 <td><s:date name="reader.born" format="yyyy年MM月dd日"/></td>
                 <td><s:property value="reader.spec"></s:property></td>
               

@@ -43,6 +43,9 @@
     		<action name="queryReader" class="com.book.manage.action.QueryReader">
     			<result name="success">/query_reader.jsp</result>
     		</action>
+    		<action name="deleteReader" class="com.book.manage.action.DeleteReader">
+    			<result name="success">/query_reader.jsp</result>
+    		</action>
     	</package>
     	
     </struts>

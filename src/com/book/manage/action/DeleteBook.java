@@ -20,6 +20,7 @@ public class DeleteBook extends ActionSupport{
 		// TODO Auto-generated method stub
 		BookDao dao=new BookDao();
 		int result = dao.deleteBookByISBN(ISBN);
+		if(result>0)
 		ActionContext.getContext().put("msg","²Ù×÷³É¹¦");
 		return super.execute();
 	}

@@ -1,6 +1,5 @@
 package com.book.manage.action.test;
 
-import java.net.URL;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -12,8 +11,11 @@ import org.junit.Test;
 
 import com.book.manage.bean.Book;
 import com.book.manage.bean.Lend;
+import com.book.manage.bean.Reader;
 import com.book.manage.dao.LendDao;
+import com.book.manage.dao.ReaderDao;
 import com.book.manage.utils.QueryRunner;
+import com.book.manage.utils.SaveFile;
 
 public class LendTest {
 public void testLendDao(){
@@ -63,14 +65,27 @@ public void testFor(){
 	System.out.println(lists.get(0).getAuthor());
 }
 
-	public void testStringToDate(){
-	SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-	try {
-		Date d = format.parse("1996-5-15");
-		System.out.println(d.toString());
-	} catch (ParseException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
+	public void testStringToDate() {
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+		try {
+			Date d = format.parse("1996-5-15");
+			System.out.println(d.toString());
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
+	public void deleteFile(){
+		SaveFile.deleteFile("/upload/1/0/0/0/0/6.jpg");
+	}
+	@Test
+	public void testQueryReader(){
+		ReaderDao dao = new ReaderDao();
+		try {
+			System.out.println(dao.deleteByID(100008));
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

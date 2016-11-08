@@ -11,8 +11,8 @@ import org.apache.struts2.ServletActionContext;
 
 public class SaveFile {
 	public static String save(File file,String feature){
-		String path = DBHelper.relPath;
-		StringBuilder builder2 =  new StringBuilder("/upload");
+		String path = DBHelper.relPath + DBHelper.logicPath;
+		StringBuilder builder2 =  new StringBuilder(DBHelper.logicPath);
 		try {
 			File f = new File(path);
 				if (!f.exists())
@@ -54,7 +54,14 @@ public class SaveFile {
 		System.out.println(file.getAbsolutePath());
 		return builder2.toString();
 	}
-	public String getPath(String feature){
-		return feature;
+
+	public static void deleteFile(String relaPath){
+		if(relaPath!=null&&(!relaPath.isEmpty())){
+			String path =DBHelper.relPath+relaPath;
+			System.out.println(path);
+			File file = new File(path);
+			if(file.exists())
+			file.delete();
+		}
 	}
 }
