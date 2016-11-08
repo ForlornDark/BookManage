@@ -1,4 +1,4 @@
-package com.book.manage.action.test;
+package com.book.manage.test;
 
 import java.sql.SQLException;
 import java.text.ParseException;
