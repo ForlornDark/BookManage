@@ -41,9 +41,9 @@ public class Permission implements Filter{
 			arg2.doFilter(arg0, arg1);
 		else if(url.endsWith("login.action"))
 			arg2.doFilter(arg0, arg1);
-		else if(url.endsWith("lenQuery.action"))
+		else if(url.endsWith("qureyLend.action"))
 			arg2.doFilter(arg0, arg1);
-		else if(url.endsWith("bookQuery.action"))
+		else if(url.endsWith("queryBook.action"))
 			arg2.doFilter(arg0, arg1);
 		else {
 			User u = null;
@@ -59,7 +59,7 @@ public class Permission implements Filter{
 			if(u!=null)
 				arg2.doFilter(arg0, arg1);
 			else
-				response.sendRedirect("/BookManage/index.jsp");
+				response.sendRedirect("/index.jsp");
 		}
 	}
 
