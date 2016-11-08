@@ -22,9 +22,8 @@
 			<h3>图书管理系统</h3>
 		</div>
 		<div class="fr top-link">
-		<s:iterator value="#session.values">
-			<a href="#" target="mainCont" title="${top.name }"><i
-				class="adminIcon"></i><span>管理员：<s:property value="top.name"/></span></a></s:iterator>
+			<a href="#"  title="${cookie.user.value}"><i
+				class="adminIcon"></i><span>管理员：${cookie.name.value}</span></a>
 		</div>
 	</div>
 
@@ -76,7 +75,7 @@
 			</div>
 			<div class="div2">
 				<div class="zlgl"></div>
-				<a class="a1" href="index.jsp">退出后台</a>
+				<a class="a1" href="logout.action">退出后台</a>
 			</div>
 		</div>
 	</div>

@@ -2,6 +2,10 @@ package com.book.manage.action;
 
 import java.util.Map;
 
+import javax.servlet.http.Cookie;
+
+import org.apache.struts2.ServletActionContext;
+
 import com.book.manage.bean.User;
 import com.book.manage.dao.UserDao;
 import com.opensymphony.xwork2.ActionContext;
@@ -29,6 +33,10 @@ public class LoginAction extends ActionSupport {
 			return "error";
 		}
 		Map<String, Object> map = ActionContext.getContext().getSession();
+		Cookie c = new Cookie("user",String.valueOf(u.getId()));
+		Cookie c2 = new Cookie("name",u.getName());
+		ServletActionContext.getResponse().addCookie(c);
+		ServletActionContext.getResponse().addCookie(c2);
 		map.put(String.valueOf(u.getId()), u);
 		return "success";
 	}
