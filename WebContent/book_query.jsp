@@ -50,9 +50,9 @@
 				--></tr>
 				</s:iterator>
 			</s:if>
-			<s:elseif test="param!=null">
+			<s:elseif test="state!=null">
 				<tr>
-					<td colspan="8" style="color:#ff0000;text-align:center ;border-collapse:collapse;">没有记录</td>
+					<td colspan="8" style="color:#ff0000;text-align:center ;border-collapse:collapse;"><s:property value="state"></s:property></td>
 				</tr>
 			</s:elseif>
 		</table>

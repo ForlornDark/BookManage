@@ -12,6 +12,7 @@ import org.junit.Test;
 import com.book.manage.bean.Book;
 import com.book.manage.bean.Lend;
 import com.book.manage.bean.Reader;
+import com.book.manage.dao.BookDao;
 import com.book.manage.dao.LendDao;
 import com.book.manage.dao.ReaderDao;
 import com.book.manage.utils.QueryRunner;
@@ -78,11 +79,33 @@ public void testFor(){
 	public void deleteFile(){
 		SaveFile.deleteFile("/upload/1/0/0/0/0/6.jpg");
 	}
-	@Test
+
 	public void testQueryReader(){
 		ReaderDao dao = new ReaderDao();
 		try {
 			System.out.println(dao.deleteByID(100008));
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}	
+	@Test
+public void testDeleteBook(){
+	BookDao dao = new BookDao();
+	try {
+		String state = dao.deleteBookByISBN("978-7-302-27014-0");
+		System.out.println(state);
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	}
+
+public void tesQueryBook(){
+		BookDao dao = new BookDao();
+		try {
+			Book b = dao.queryByISBN("978-7-121-13072-4");
+			System.out.println(b.getBookName());
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

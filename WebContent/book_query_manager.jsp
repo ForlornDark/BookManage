@@ -53,9 +53,9 @@
 				</tr>
 				</s:iterator>
 			</s:if>
-			<s:elseif test="#msg!=null">
+			<s:elseif test="state!=null">
 				<tr>
-					<td colspan="8" style="color:#ff0000;text-align:center ;border-collapse:collapse;"><s:property value="msg"/></td>
+					<td colspan="8" style="color:#ff0000;text-align:center ;border-collapse:collapse;"><s:property value="state"/></td>
 				</tr>
 			</s:elseif>
 		</table>

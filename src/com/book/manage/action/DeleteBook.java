@@ -13,15 +13,14 @@ public class DeleteBook extends ActionSupport{
 	/**
 	 * 
 	 */
+	private String state;
 	private String ISBN;
 	private static final long serialVersionUID = 4410908701972116153L;
 	@Override
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
 		BookDao dao=new BookDao();
-		int result = dao.deleteBookByISBN(ISBN);
-		if(result>0)
-		ActionContext.getContext().put("msg","²Ù×÷³É¹¦");
+		state = dao.deleteBookByISBN(ISBN);
 		return super.execute();
 	}
 	public String getISBN() {
@@ -29,6 +28,12 @@ public class DeleteBook extends ActionSupport{
 	}
 	public void setISBN(String iSBN) {
 		ISBN = iSBN;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
 	}
 	
 }

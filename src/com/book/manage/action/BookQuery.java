@@ -15,12 +15,13 @@ public class BookQuery extends ActionSupport{
 	private List<Book> list;
 	private static final long serialVersionUID = 1L;
 	private String param =null;
+	private String state ;
 	@Override
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
 		list = new BookDao().queryByNaAu(param);
 		if(list.size()==0)
-			ActionContext.getContext().put("msg", "无搜索结果");
+			state = "无搜索结果";
 		return super.execute();
 	}
 	
@@ -37,6 +38,14 @@ public class BookQuery extends ActionSupport{
 	}
 	public void setParam(String param) {
 		this.param = param;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
 	}
 	
 }
