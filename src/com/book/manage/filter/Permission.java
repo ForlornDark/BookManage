@@ -59,7 +59,7 @@ public class Permission implements Filter{
 			if(u!=null)
 				arg2.doFilter(arg0, arg1);
 			else
-				response.sendRedirect("/index.jsp");
+				response.sendError(404);
 		}
 	}
 
