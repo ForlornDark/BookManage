@@ -50,5 +50,4 @@
     			<result name="success" type="redirect">/index.jsp</result>
     		</action>
     	</package>
-    	
     </struts>
