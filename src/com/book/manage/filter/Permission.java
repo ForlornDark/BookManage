@@ -31,7 +31,10 @@ public class Permission implements Filter{
 		HttpServletResponse response = (HttpServletResponse)arg1;
 		StringBuffer buffer= request.getRequestURL();
 		String url = buffer.toString();
+		System.out.println(url);
 		if(url.endsWith("index.jsp"))
+			arg2.doFilter(arg0, arg1);
+		else if(url.endsWith("/"))
 			arg2.doFilter(arg0, arg1);
 		else if(url.endsWith("login.jsp"))
 			arg2.doFilter(arg0, arg1);

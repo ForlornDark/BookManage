@@ -24,11 +24,17 @@ form{
 }
 
 .page{
-    text-align: right;margin-right:25px;margin-top:5px;
+	position:absolute;
+	left:39%;
+	top:70%;
+	width:100%;
 }
-
+.page input{
+	width:40px;
+}
 .page a{
     margin-left: 5px;
+    
 }
 
 .page .current{

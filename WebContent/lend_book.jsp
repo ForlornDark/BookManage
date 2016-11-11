@@ -50,6 +50,5 @@
         	</s:iterator>
         </s:else>
        </table>
-       <s:debug></s:debug>
 </body>
 </html>
