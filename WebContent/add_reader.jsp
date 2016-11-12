@@ -26,7 +26,7 @@
     			<input id ="name" autocomplete="off" type="text" name="reader.name" class="abc input-default" placeholder="姓名" >
     		</td>
     		<td><font color="#777777"><strong>性别：</strong></font>
-    			<select name="reader.sex" name="reader.sex">
+    			<select name="reader.sex">
     				<option value="1">男</option>
     				<option value="0">女</option>
     			</select>
@@ -39,7 +39,22 @@
 		</tr>
 		<tr>
 			<td><font color="#777777"><strong>职业：</strong></font>
-    			<input id="spec" autocomplete="off" type="text" name="reader.spec" class="abc input-default" placeholder="职业" >
+			<select name="reader.spec">
+				<option value="学生">学生</option>
+				<option value="计算机/互联网/通信">计算机/互联网/通信</option>
+				<option value="生产/工艺/制造">生产/工艺/制造</option>
+				<option value="医疗/护理/制药">医疗/护理/制药</option>
+				<option value="金融/银行/投资/保险">金融/银行/投资/保险</option>
+				<option value="商业/服务业/个体经营">商业/服务业/个体经营</option>
+				<option value="文化/广告/传媒">文化/广告/传媒</option>
+				<option value="娱乐/艺术/表演">娱乐/艺术/表演</option>
+				<option value="律师/法务">律师/法务</option>
+				<option value="教育/培训">教育/培训</option>
+				<option value="公务员/行政/事业单位">公务员/行政/事业单位</option>
+				<option value="模特">模特</option>
+				<option value="空姐">空姐</option>
+				<option value="其他">其他</option>
+			</select>
     		</td>
     		<td><font color="#777777"><strong>照片：</strong></font>
     			<input autocomplete="off" type="file" name="photo" class="abc input-default" >

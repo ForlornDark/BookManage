@@ -10,9 +10,5 @@ function check(){
 		msg.innerHTML="姓名不能为空";
 		correct = false;
 	}
-	if(spec==""){
-		msg.innerHTML="职业不能为空";
-		correct = false;
-	}
 	return correct;
 }
