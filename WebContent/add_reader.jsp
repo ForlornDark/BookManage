@@ -7,6 +7,7 @@
     <title>add-book</title>
     <meta charset="UTF-8">
     <script type="text/javascript" src="js/date.js"></script>
+    <script type="text/javascript" src="js/add_reader.js"></script>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -18,11 +19,11 @@
     	</style>
 </head>
 <body onLoad="init()">
-<form class="form-inline definewidth m20" action="addReader" method="post" enctype="multipart/form-data">
+<form class="form-inline definewidth m20" action="addReader" method="post" enctype="multipart/form-data" onsubmit="return check()">
 	<table class="table table-bordered table-hover definewidth m10">
 		<tr>
 			<td><font color="#777777"><strong>姓名：</strong></font>
-    			<input autocomplete="off" type="text" name="reader.name" class="abc input-default" placeholder="姓名" >
+    			<input id ="name" autocomplete="off" type="text" name="reader.name" class="abc input-default" placeholder="姓名" >
     		</td>
     		<td><font color="#777777"><strong>性别：</strong></font>
     			<select name="reader.sex" name="reader.sex">
@@ -38,12 +39,12 @@
 		</tr>
 		<tr>
 			<td><font color="#777777"><strong>职业：</strong></font>
-    			<input autocomplete="off" type="text" name="reader.spec" class="abc input-default" placeholder="职业" >
+    			<input id="spec" autocomplete="off" type="text" name="reader.spec" class="abc input-default" placeholder="职业" >
     		</td>
     		<td><font color="#777777"><strong>照片：</strong></font>
     			<input autocomplete="off" type="file" name="photo" class="abc input-default" >
     		</td>
-    		<td><button type="submit" class="btn btn-primary">注册</button><span class="msg"></span>
+    		<td><button type="submit" class="btn btn-primary">注册</button><span id="msg" class="msg"></span>
     		</td>
 		</tr>
 		

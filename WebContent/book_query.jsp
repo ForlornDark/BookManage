@@ -16,7 +16,7 @@
 	<div>
 		<s:form class="form-inline definewidth m20" action="queryBook" method ="post" onsubmit="return check();">
 			<font color="#777777"><strong>书名或作者：</strong></font>
-			<input type="text" class="abc input-default" autocomplete="off" placeholder="输入书名或作者" name="page.index">
+			<input id="name" type="text" class="abc input-default" autocomplete="off" placeholder="输入书名或作者" name="page.index">
 			&nbsp;&nbsp;<button type="submit" class="btn btn-primary">查询</button>
 			<span style="color:#ff0000;" id="msg"></span>
 		</s:form>

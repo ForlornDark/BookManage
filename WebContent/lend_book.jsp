@@ -10,16 +10,17 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/lend_book.css">
+    <script type="text/javascript" src="js/lend_book.js"></script>
 </head>
 <body>
-<form class="form-inline definewidth m20" action="lendBook" method="post">
+<form class="form-inline definewidth m20" action="lendBook" method="post" onsubmit="return check()">
      <font color="#777777"><strong>借阅号：</strong></font>
-    <input autocomplete="off" type="number" name="lend.readerId" class="abc input-default" placeholder="数字ID" >&nbsp;&nbsp;
+    <input id="readerId" autocomplete="off" type="number" name="lend.readerId" class="abc input-default" placeholder="数字ID" >&nbsp;&nbsp;
     <font color="#777777"><strong>ISBN：</strong></font>
-    <input autocomplete="off" type="text" name="lend.ISBN" class="abc input-default" placeholder="978-7-121-25457-4">
+    <input id="isbn" autocomplete="off" type="text" name="lend.ISBN" class="abc input-default" placeholder="978-7-121-25457-4">
     <font color="#777777"><strong>数量：</strong></font>
-    <input autocomplete="off" type="number" name="lend.num" class="abc input-default" placeholder="数字">&nbsp;&nbsp;
-    <button type="submit" class="btn btn-primary">借书</button><span class="msg"></span>
+    <input id="number" autocomplete="off" type="number" name="lend.num" class="abc input-default" placeholder="数字">&nbsp;&nbsp;
+    <button type="submit" class="btn btn-primary">借书</button><span id="msg" class="msg"></span>
 </form>
 <table class="table table-bordered table-hover definewidth m10">
 	<caption><h2>借书记录</h2></caption>

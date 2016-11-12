@@ -16,7 +16,7 @@
 	<div>
 		<s:form class="form-inline definewidth m20" action="queryReader" method ="post" onsubmit="return check();">
 			<font color="#777777"><strong>ID或姓名：</strong></font>
-			<input type="text" class="abc input-default" autocomplete="off" placeholder="ID或姓名" name="param">
+			<input id="name" type="text" class="abc input-default" autocomplete="off" placeholder="ID或姓名" name="param">
 			&nbsp;&nbsp;<button type="submit" class="btn btn-primary">查询</button>
 			<span style="color:#ff0000;" id="msg"></span>
 		</s:form>

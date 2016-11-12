@@ -13,9 +13,9 @@
 <title>lend_query</title>
 </head>
 <body>
-	<form class="form-inline definewidth m20" action="queryLend" method="post" onsubmit="return check();">
+	<form class="form-inline definewidth m20" action="queryLend" method="post" onsubmit="return check()">
      	<font color="#777777"><strong>借阅号:</strong></font>
-    	<input type="text" autocomplete="off" pattern="^[0-9]*$" name="id" id="id" class="abc input-default" placeholder="  您的借阅号">&nbsp;&nbsp;
+    	<input type="number" autocomplete="off" name="id" id="readerId" class="abc input-default" placeholder="不少于6位">&nbsp;&nbsp;
     	<button type="submit" class="btn btn-primary">查询</button> <span style="color:#ff0000;" id="msg"></span>
 	</form>
 	<div>

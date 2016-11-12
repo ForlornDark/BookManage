@@ -6,41 +6,42 @@
 <head>
     <title>add-book</title>
     <meta charset="UTF-8">
+    <script type="text/javascript" src="js/add_book.js"></script>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/lend_book.css">
 </head>
 <body>
-<form class="form-inline definewidth m20" action="addBook" method="post" enctype="multipart/form-data">
+<form class="form-inline definewidth m20" action="addBook" method="post" enctype="multipart/form-data" onsubmit="return check()">
 	<table class="table table-bordered table-hover definewidth m10">
 		<tr>
 			<td><font color="#777777"><strong>ISBN：&nbsp&nbsp</strong></font>
-    			<input autocomplete="off" type="text" name="book.ISBN" class="abc input-default" placeholder="978-7-121-25457-4" >
+    			<input id="isbn" autocomplete="off" type="text" name="book.ISBN" class="abc input-default" placeholder="978-7-121-25457-4" >
     		</td>
     		<td><font color="#777777"><strong>书名：</strong></font>
-    			<input autocomplete="off" type="text" name="book.bookName" class="abc input-default" placeholder="图书名" >
+    			<input id="bookname" autocomplete="off" type="text" name="book.bookName" class="abc input-default" placeholder="图书名" >
     		</td>
     		<td><font color="#777777"><strong>作者：</strong></font>
-    			<input autocomplete="off" type="text" name="book.author" class="abc input-default" placeholder="作者" >
+    			<input id="author" autocomplete="off" type="text" name="book.author" class="abc input-default" placeholder="作者" >
     		</td>
 		</tr>
 		<tr>
 			<td><font color="#777777"><strong>出版社：</strong></font>
-    			<input autocomplete="off" type="text" name="book.publisher" class="abc input-default" placeholder="XXX出版社" >
+    			<input id="publisher" autocomplete="off" type="text" name="book.publisher" class="abc input-default" placeholder="XXX出版社" >
     		</td>
     		<td><font color="#777777"><strong>价格：</strong></font>
-    			<input autocomplete="off" type="text" name="book.price" class="abc input-default" placeholder="默认为0" >
+    			<input id="price" autocomplete="off" type="text" name="book.price" class="abc input-default" placeholder="默认为0" >
     		</td>
     		<td><font color="#777777"><strong>数量：</strong></font>
-    			<input autocomplete="off" type="number" name="book.cnum" class="abc input-default" placeholder="大于0" >
+    			<input id="number" autocomplete="off" type="number" name="book.cnum" class="abc input-default" placeholder="大于0" >
     		</td>
 		</tr>
 		<tr>
 			<td><font color="#777777"><strong>封&nbsp&nbsp面：&nbsp</strong></font>
     			<input autocomplete="off" type="file" name="photo" class="abc input-default" >
     		</td>
-    		<td><button type="submit" class="btn btn-primary">添加</button><span class="msg"></span>
+    		<td><button type="submit" class="btn btn-primary">添加</button><span id="msg" class="msg"></span>
     		</td>
 		</tr>
 	</table>
