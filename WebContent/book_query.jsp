@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script type="text/javascript" src="js/book_query.js"></script>
+<!--<script type="text/javascript" src="js/book_query.js"></script>-->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -18,7 +18,7 @@
 			<font color="#777777"><strong>书名或作者：</strong></font>
 			<input id="name" type="text" class="abc input-default" autocomplete="off" placeholder="输入书名或作者" name="page.index">
 			&nbsp;&nbsp;<button type="submit" class="btn btn-primary">查询</button>
-			<span style="color:#ff0000;" id="msg"></span>
+			<span style="color:#ff0000;" id="msg"><s:property value="message"/></span>
 		</s:form>
 	</div>
 	<div>

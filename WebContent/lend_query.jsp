@@ -5,8 +5,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script type="text/javascript" src="js/lend_query.js"></script>
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<script type="text/javascript" src="js/lend_query.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
  <link rel="stylesheet" type="text/css" href="css/lend_book.css">
@@ -47,9 +47,9 @@
 				</tr>
 				</s:iterator>
 			</s:if>
-			<s:elseif test="id!=null">
+			<s:elseif test="state!=null">
 				<tr>
-					<td colspan="8" style="color:#ff0000;text-align:center ;border-collapse:collapse;">没有记录</td>
+					<td colspan="8" style="color:#ff0000;text-align:center ;border-collapse:collapse;"><s:property value="state"/></td>
 				</tr>
 			</s:elseif>
 		</table>
