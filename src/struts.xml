@@ -33,6 +33,8 @@
 			<interceptor-ref name="basicStack"/>
     			<result name="success">/add_reader.jsp</result>
     		</action>
+    		<action name="sendMail" class="com.book.manage.action.SendMail">
+    		</action>
     		<action name="addBook" class="com.book.manage.action.AddBook">
     		<interceptor-ref name="fileUpload">
     			<param name="allowedTypes">image/png,image/gif,image/jpeg</param>

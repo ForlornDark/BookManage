@@ -42,11 +42,13 @@ a:hover{
 	position:absolute;
 	top:70%;
 	left:45%;
+	
 }
 .right{
 	position:absolute;
 	left:80%;
 	top:10%;
+	color:#ffffff;
 }
 .bg-bubbles {
   position: absolute;

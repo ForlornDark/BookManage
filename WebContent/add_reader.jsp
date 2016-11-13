@@ -23,7 +23,7 @@
 	<table class="table table-bordered table-hover definewidth m10">
 		<tr>
 			<td><font color="#777777"><strong>姓名：</strong></font>
-    			<input id ="name" autocomplete="off" type="text" name="reader.name" class="abc input-default" placeholder="姓名" >
+    			<input id ="name" autocomplete="off" type="text" name="reader.name" value="${reader.name}" class="abc input-default" placeholder="姓名" >
     		</td>
     		<td><font color="#777777"><strong>性别：</strong></font>
     			<select name="reader.sex">
@@ -59,10 +59,13 @@
     		<td><font color="#777777"><strong>照片：</strong></font>
     			<input autocomplete="off" type="file" name="photo" class="abc input-default" >
     		</td>
-    		<td><button type="submit" class="btn btn-primary">注册</button><span id="msg" class="msg"></span>
-    		</td>
+    		<td><font color="#777777"><strong>邮箱：</strong></font>
+    		<input name="reader.mail" autocomplete="off" value="${reader.mail}" id="mail" type="email" class="abc input-default">&nbsp&nbsp<button type="button" id="sendcode" onclick="send()" class="btn btn-primary">获取验证码</button></td>
 		</tr>
-		
+		<tr>
+		<td><font color="#777777"><strong>验证码：</strong></font><input autocomplete="off" name="checkcode" id="checkcode" type="number" class="abc input-default"></td>
+			<td><button type="submit" class="btn btn-primary">注册</button><span id="msg" class="msg"><s:property value="state"/></span></td>
+		</tr>
 	</table>
 </form>
 <table class="table table-bordered table-hover definewidth m10">
@@ -74,17 +77,22 @@
         <th>性别</th>
         <th>出生日期</th>
         <th>职业</th>
+        <th>邮箱</th>
 		<th>照片</th>
      </tr>
     </thead>
+    <s:if test="reader.readerId!=0">
         	<tr>
+        	
         		<td><s:property value="reader.readerId"></s:property></td>
                 <td><s:property value="reader.name"></s:property></td>
                 <td><s:if test="reader.sex==0">女</s:if><s:elseif test="reader.sex==1">男</s:elseif></td>
                 <td><s:date name="reader.born" format="yyyy年MM月dd日"/></td>
                 <td><s:property value="reader.spec"></s:property></td>
-              
+                <td><s:property value="reader.mail"/></td>
+                <td><img  src="${reader.photo}" width="35px" height="35px"></td>
             </tr>
+            </s:if>
        </table>
 </body>
 </html>

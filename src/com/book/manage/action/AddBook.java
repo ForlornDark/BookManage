@@ -4,6 +4,7 @@ import com.book.manage.bean.Book;
 import com.book.manage.dao.BookDao;
 import com.book.manage.utils.DBHelper;
 import com.book.manage.utils.SaveFile;
+import com.book.manage.utils.ServerConst;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -37,7 +38,7 @@ public class AddBook extends ActionSupport{
 		dao.addBook(book);
 		System.out.println(book.getISBN());
 		if(book.getPath()!=null&&(!book.getPath().isEmpty()))
-		book.setPath(DBHelper.URL+book.getPath());
+		book.setPath(ServerConst.URL+book.getPath());
 		return super.execute();
 	}
 	public Book getBook() {

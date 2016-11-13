@@ -15,6 +15,7 @@ import com.book.manage.dao.ReaderDao;
 import com.book.manage.utils.DBHelper;
 import com.book.manage.utils.DateUtil;
 import com.book.manage.utils.SaveFile;
+import com.book.manage.utils.ServerConst;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -30,6 +31,8 @@ public class AddReader extends ActionSupport{
 	private String photoFileName;
 	private Reader reader;
 	private String photoContentType;
+	private int checkcode;
+	private String state;
 	/**
 	 * 
 	 */
@@ -37,6 +40,12 @@ public class AddReader extends ActionSupport{
 	@Override
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
+		int code = (int) ActionContext.getContext().getSession().get(reader.getMail());
+		ActionContext.getContext().getSession().remove(reader.getMail());
+		if(code!=checkcode){
+			state="验证码输入不正确，注册失败";
+			return SUCCESS;
+		}
 		reader.setBorn(DateUtil.parse(year+"-"+month+"-"+day));
 		ReaderDao dao= new ReaderDao();
 		dao.addReader(reader);
@@ -50,6 +59,7 @@ public class AddReader extends ActionSupport{
 			photoFileName = reader.getReaderId()+".jpg";
 			reader.setPhoto(SaveFile.save(photo, photoFileName));
 			dao.updatePhoto(reader);
+			reader.setPhoto(ServerConst.URL+reader.getPhoto());
 		}
 		return super.execute();
 	}
@@ -95,6 +105,18 @@ public class AddReader extends ActionSupport{
 	}
 	public void setPhotoContentType(String photoContentType) {
 		this.photoContentType = photoContentType;
+	}
+	public int getCheckcode() {
+		return checkcode;
+	}
+	public void setCheckcode(int checkcode) {
+		this.checkcode = checkcode;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
 	}
 	
 	

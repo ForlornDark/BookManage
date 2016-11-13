@@ -31,6 +31,7 @@
 				<th>性别</th>
 				<th>生日</th>
 				<th>职业</th>
+				<th>邮箱</th>
 				<th>头像</th>
 				<th>操作</th>
 			</tr>
@@ -48,6 +49,7 @@
 					<s:elseif test="top.sex==0"><td>女</td></s:elseif>
 					<td><s:date name="top.born" format="yyyy-MM-dd"/></td>
 					<td><s:property value="top.spec"/></td>
+					<td><s:property value="top.mail"/></td>
 					<td><img src="${top.photo}" width="40px" height="40px"></td>
 					<td><a href="deleteReader.action?readerId=${top.readerId}">注销</a></td>
 				</tr>

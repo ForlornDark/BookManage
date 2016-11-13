@@ -9,6 +9,7 @@ public class Reader {
 	private Date born;
 	private String spec;
 	private String photo;
+	private String mail;
 	public int getReaderId() {
 		return readerId;
 	}
@@ -44,6 +45,12 @@ public class Reader {
 	}
 	public void setPhoto(String photo) {
 		this.photo = photo;
+	}
+	public String getMail() {
+		return mail;
+	}
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
 	
 }

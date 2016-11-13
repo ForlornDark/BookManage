@@ -11,19 +11,20 @@ import com.book.manage.utils.DateUtil;
 import com.book.manage.utils.QueryRunner;
 import com.book.manage.utils.ResultSetHandler;
 import com.book.manage.utils.SaveFile;
+import com.book.manage.utils.ServerConst;
 
 public class ReaderDao {
 	QueryRunner runner  =null;
 	public int addReader(Reader reader) throws SQLException{
 		if(runner == null)
 			runner  = new QueryRunner();
-		String sql = "insert into reader(readerid,name,sex,born,spec) values (null,?,?,TO_DATE(?,'yyyy-MM-dd'),?)";
-		return runner.update(sql,reader.getName(),reader.getSex(),DateUtil.format(reader.getBorn()),reader.getSpec());
+		String sql = "insert into reader(readerid,name,sex,born,spec,email) values (null,?,?,TO_DATE(?,'yyyy-MM-dd'),?,?)";
+		return runner.update(sql,reader.getName(),reader.getSex(),DateUtil.format(reader.getBorn()),reader.getSpec(),reader.getMail());
 	}
 	public int queryID(Reader reader) throws SQLException{
 		if(runner == null)
 			runner  = new QueryRunner();
-		String sql = "select readerid from reader where name=? and sex =? and spec = ?";
+		String sql = "select readerid from reader where email = ?";
 		int ID = runner.query(sql, new ResultSetHandler<Integer>(){
 
 			@Override
@@ -33,7 +34,7 @@ public class ReaderDao {
 				while(set.next())
 				 id = set.getInt(1);
 				return id;
-			}}, reader.getName(),reader.getSex(),reader.getSpec());
+			}}, reader.getMail());
 		return ID;
 	}
 	public int updatePhoto(Reader reader) throws SQLException{
@@ -65,9 +66,10 @@ public class ReaderDao {
 					r.setSex(set.getByte(3));
 					r.setBorn(set.getDate(4));
 					r.setSpec(set.getString(5));
-					String photo = set.getString(6);
+					r.setMail(set.getString(6));
+					String photo = set.getString(7);
 					if(photo!=null&&(!photo.isEmpty()))
-					r.setPhoto(DBHelper.URL+set.getString(6));
+					r.setPhoto(ServerConst.URL+photo);
 					list.add(r);
 				}
 				return list;
