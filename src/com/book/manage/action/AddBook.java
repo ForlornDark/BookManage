@@ -16,9 +16,13 @@ public class AddBook extends ActionSupport{
 	 * 
 	 */
 	private static final long serialVersionUID = -3564363930759618822L;
+	//图书信息
 	private Book book;
+	//图书缓冲封面，图片
 	private File photo;
+	//图书图片名
 	private String photoFileName;
+	//图书图片类型
 	private String photoContentType;
 	@Override
 	public String execute() throws Exception {

@@ -7,14 +7,19 @@ import java.util.Date;
  *
  */
 public class Lend {
-
+	//借阅id,由数据库序列产生
 	private int lenId;
+	//读者ID
 	private int readerId;
+	//所借书的ISBN
 	private String ISBN;
+	//借书时间
 	private Date time;
+	//借书数量
 	private int num;
+	//借书，书的详细信息
 	private Book book;
-	private Boolean isBack;
+	//private Boolean isBack;
 	public int getLenId() {
 		return lenId;
 	}
@@ -51,11 +56,11 @@ public class Lend {
 	public void setBook(Book book) {
 		this.book = book;
 	}
-	public Boolean getIsBack() {
-		return isBack;
-	}
-	public void setIsBack(Boolean isBack) {
-		this.isBack = isBack;
-	}
+//	public Boolean getIsBack() {
+//		return isBack;
+//	}
+//	public void setIsBack(Boolean isBack) {
+//		this.isBack = isBack;
+//	}
 	
 }

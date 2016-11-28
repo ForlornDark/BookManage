@@ -3,12 +3,19 @@ package com.book.manage.bean;
 import java.util.Date;
 
 public class Reader {
+	//读者ID
 	private int readerId;
+	//读者名字
 	private String name;
+	//读者性别
 	private byte sex;
+	//读者生日
 	private Date born;
+	//读者职业
 	private String spec;
+	//读者照片，文件路径
 	private String photo;
+	//读者邮箱，邮箱认证
 	private String mail;
 	public int getReaderId() {
 		return readerId;

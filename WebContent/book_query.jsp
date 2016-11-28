@@ -44,7 +44,7 @@
 					<td><s:property value="top.author"/></td>
 					<td><s:property value="top.publisher"/></td>
 					<td><s:property value="top.price"/></td>
-					<td><s:property value="top.cnum"/></td>
+					<td><s:property value="top.cnum"/></td>	
 					<td><s:property value="top.snum"/></td>
 				<!-- 	<td><s:property value="top.photo"/><td>
 				--></tr>

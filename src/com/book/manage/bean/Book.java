@@ -7,16 +7,23 @@ import java.sql.Blob;
  *
  */
 public class Book{
+	//图书ISBN
 	private String ISBN;
+	//图书名
 	private String bookName;
-	private String bookId;
+	//图书id
+	//private String bookId;
+	//图书作者
 	private String author;
+	//图书出版社
 	private String publisher;
+	//图书价格
 	private float price;
 	//复本量,复本量=库存量+已借阅
 	private int cnum;
 	//库存量
 	private int snum;
+	//图书描述
 	private String summary;
 	//图书封面图片路径，以图片格式存储在web/inf/resources下
 	private String path;

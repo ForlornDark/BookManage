@@ -12,7 +12,9 @@ public class DeleteReader extends ActionSupport{
 	 * 
 	 */
 	private static final long serialVersionUID = 3168288896120281354L;
+	//删除结果信息
 	private String state;
+	//读者ID
 	private int readerId;
 	@Override
 	public String execute() throws Exception {

@@ -16,8 +16,9 @@ import com.opensymphony.xwork2.ActionSupport;
  *
  */
 public class LoginAction extends ActionSupport {
-
+	//管理员封装对象
 	private User user;
+	//登陆结果信息
 	private String msg;
 	/**
 	 * 处理登录与注册管理员

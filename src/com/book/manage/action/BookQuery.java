@@ -13,10 +13,13 @@ import com.opensymphony.xwork2.ActionSupport;
  *
  */
 public class BookQuery extends ActionSupport{
+	
 	private List<Book> list;
 	private static final long serialVersionUID = 1L;
 	private String param =null;
+	//查询结果状态
 	private String state ;
+	//分页信息
 	private Page<List<Book>> page;
 	@Override
 	public String execute() throws Exception {

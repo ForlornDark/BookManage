@@ -16,6 +16,7 @@ import com.opensymphony.xwork2.ActionSupport;
  */
 public class SendMail extends ActionSupport{
 	private static final long serialVersionUID = 5149616240257953949L;
+	//” œ‰µÿ÷∑
 	private String mail;
 	
 	@Override

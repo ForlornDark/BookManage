@@ -17,8 +17,11 @@ public class QueryReader extends ActionSupport{
 	/**
 	 * 
 	 */
+	//查询结果状态信息
 	private String state;
+	//查询结果
 	private List<Reader> readers;
+	//查询的参数，读者ID
 	private String param;
 	private static final long serialVersionUID = 6085602299054684400L;
 	@Override

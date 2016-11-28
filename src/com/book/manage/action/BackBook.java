@@ -12,6 +12,7 @@ import com.opensymphony.xwork2.ActionSupport;
  *
  */
 public class BackBook extends ActionSupport {
+	//ΩË‘ƒ–≈œ¢
 	private Lend lend;
 	/**
 	 * 

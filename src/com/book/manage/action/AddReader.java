@@ -24,14 +24,23 @@ import com.opensymphony.xwork2.ActionSupport;
  *
  */
 public class AddReader extends ActionSupport{
+	//生日，年
 	private int year;
+	//生日，月
 	private int month;
+	//生日，天
 	private int day;
+	//读者缓存图片封装类
 	private File photo;
+	//图片名
 	private String photoFileName;
+	//封装的读者信息
 	private Reader reader;
+	//图片类型
 	private String photoContentType;
+	//图片验证码
 	private int checkcode;
+	//提示处理结果
 	private String state;
 	/**
 	 * 

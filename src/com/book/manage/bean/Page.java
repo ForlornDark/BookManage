@@ -1,11 +1,17 @@
 package com.book.manage.bean;
 
 public class Page<T> {
+	//总数
 	private int count;
+	//分页大小
 	private static int blockSize = 8;
+	//分页的单页结果
 	private T result;
+	//分页的索引
 	private String index;
+	//所在页数
 	private int pageCount;
+	//最大页数
 	private int maxPage;
 	public int getCount() {
 		return count;

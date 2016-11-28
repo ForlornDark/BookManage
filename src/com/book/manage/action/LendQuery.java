@@ -16,9 +16,11 @@ public class LendQuery extends ActionSupport{
 	 * 
 	 */
 	private static final long serialVersionUID = -3252649536972207290L;
-
+	//查询结果
 	private List<Lend> list;
+	//借阅ID
 	private int id;
+	//查询结果状态。
 	private String state;
 	@Override
 	public String execute() throws Exception {
