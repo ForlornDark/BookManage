@@ -5,8 +5,11 @@ package com.book.manage.bean;
  *
  */
 public class User {
+	//管理员ID
 	private int id;
+	//管理员名字
 	private String name;
+	//管理员密码
 	private String password;
 	private byte role;
 	public int getId() {
