@@ -16,7 +16,7 @@
 <form class="form-inline definewidth m20" action="addBook" method="post" enctype="multipart/form-data" onsubmit="return check()">
 	<table class="table table-bordered table-hover definewidth m10">
 		<tr>
-			<td><font color="#777777"><strong>ISBN：&nbsp&nbsp</strong></font>
+			<td><font color="#777777"><strong>&nbspISBN：&nbsp&nbsp</strong></font>
     			<input id="isbn" autocomplete="off" type="text" name="book.ISBN" class="abc input-default" placeholder="978-7-121-25457-4" >
     		</td>
     		<td><font color="#777777"><strong>书名：</strong></font>

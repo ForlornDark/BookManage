@@ -22,23 +22,23 @@
 <form class="form-inline definewidth m20" action="addReader" method="post" enctype="multipart/form-data" onsubmit="return check()">
 	<table class="table table-bordered table-hover definewidth m10">
 		<tr>
-			<td><font color="#777777"><strong>姓名：</strong></font>
+			<td><font color="#777777"><strong>姓&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp名：</strong></font>
     			<input id ="name" autocomplete="off" type="text" name="reader.name" value="${reader.name}" class="abc input-default" placeholder="姓名" >
     		</td>
-    		<td><font color="#777777"><strong>性别：</strong></font>
+    		<td><font color="#777777"><strong>性&nbsp&nbsp别：</strong></font>
     			<select name="reader.sex">
     				<option value="1">男</option>
     				<option value="0">女</option>
     			</select>
     		</td>
+		</tr>
+		<tr>
     		<td><font color="#777777"><strong>出生日期：</strong></font>
     			<select class="date"  id="year" onChange="swap_day()" name="year"></select>年
 				<select class="date" id="month" onChange="swap_day()" name="month"></select>月
 				<select class="date"  id="day" name="day"></select>日
     		</td>
-		</tr>
-		<tr>
-			<td><font color="#777777"><strong>职业：</strong></font>
+			<td><font color="#777777"><strong>职&nbsp&nbsp业：</strong></font>
 			<select name="reader.spec">
 				<option value="学生">学生</option>
 				<option value="计算机/互联网/通信">计算机/互联网/通信</option>
@@ -56,14 +56,18 @@
 				<option value="其他">其他</option>
 			</select>
     		</td>
-    		<td><font color="#777777"><strong>照片：</strong></font>
-    			<input autocomplete="off" type="file" name="photo" class="abc input-default" >
-    		</td>
-    		<td><font color="#777777"><strong>邮箱：</strong></font>
+    	</tr>
+    	<tr>
+    		
+    		<td><font color="#777777"><strong>邮&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp箱：</strong></font>
     		<input name="reader.mail" autocomplete="off" value="${reader.mail}" id="mail" type="email" class="abc input-default">&nbsp&nbsp<button type="button" id="sendcode" onclick="send()" class="btn btn-primary">获取验证码</button></td>
+		<td><font color="#777777"><strong>验证码：</strong></font><input autocomplete="off" name="checkcode" id="checkcode" type="number" class="abc input-default"></td>
 		</tr>
 		<tr>
-		<td><font color="#777777"><strong>验证码：</strong></font><input autocomplete="off" name="checkcode" id="checkcode" type="number" class="abc input-default"></td>
+			
+			<td><font color="#777777"><strong>照&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp片：</strong></font>
+    			<input autocomplete="off" type="file" name="photo" class="abc input-default" >
+    		</td>
 			<td><button type="submit" class="btn btn-primary">注册</button><span id="msg" class="msg"><s:property value="state"/></span></td>
 		</tr>
 	</table>
