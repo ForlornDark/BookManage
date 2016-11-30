@@ -3,19 +3,19 @@ package com.book.manage.bean;
 import java.util.Date;
 
 public class Reader {
-	//¶ÁÕßID
+	//è¯»è€…ID
 	private int readerId;
-	//¶ÁÕßÃû×Ö
+	//è¯»è€…åå­—
 	private String name;
-	//¶ÁÕßĞÔ±ğ
+	//è¯»è€…æ€§åˆ«
 	private byte sex;
-	//¶ÁÕßÉúÈÕ
+	//è¯»è€…ç”Ÿæ—¥
 	private Date born;
-	//¶ÁÕßÖ°Òµ
+	//è¯»è€…èŒä¸š
 	private String spec;
-	//¶ÁÕßÕÕÆ¬£¬ÎÄ¼şÂ·¾¶
+	//è¯»è€…ç…§ç‰‡ï¼Œæ–‡ä»¶è·¯å¾„
 	private String photo;
-	//¶ÁÕßÓÊÏä£¬ÓÊÏäÈÏÖ¤
+	//è¯»è€…é‚®ç®±ï¼Œé‚®ç®±è®¤è¯
 	private String mail;
 	public int getReaderId() {
 		return readerId;

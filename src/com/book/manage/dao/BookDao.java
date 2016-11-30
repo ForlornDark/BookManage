@@ -34,9 +34,9 @@ public class BookDao {
 			runner.update(sql, ISBN);
 			if(book.getPath()!=null)
 			SaveFile.deleteFile(book.getPath());
-			result = "É¾³ı³É¹¦";
+			result = "åˆ é™¤æˆåŠŸ";
 		}else
-			result = "É¾³ıÊ§°Ü£¬¼ì²éISBN";
+			result = "åˆ é™¤å¤±è´¥ï¼Œæ£€æŸ¥ISBN";
 		return result;
 	}
 	public int addBook(Book book) throws SQLException{

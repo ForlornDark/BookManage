@@ -56,7 +56,7 @@ public class LendDao {
 		Map<String,Object> map = new HashMap<String,Object>();
 		if(runner==null)
 			runner = new QueryRunner();
-		System.out.println("¿ªÊ¼¡£¡£");
+		System.out.println("å¼€å§‹ã€‚ã€‚");
 		int snum = runner.query(sql, new ResultSetHandler<Integer>(){
 
 			@Override
@@ -69,10 +69,10 @@ public class LendDao {
 				return result;
 			}}, l.getISBN());
 		if(snum<0){
-			map.put("error", "ÇëÈ·ÈÏISBN»òID");
+			map.put("error", "è¯·ç¡®è®¤ISBNæˆ–ID");
 			return map;
 		}else if(snum-l.getNum()<0){
-			map.put("error", "ÊéÁ¿²»¹»");
+			map.put("error", "ä¹¦é‡ä¸å¤Ÿ");
 			return map;
 		}
 		snum = snum -l.getNum();
@@ -86,14 +86,14 @@ public class LendDao {
 	public Map<String,Object> backBook(Lend lend) throws SQLException{
 		Map<String,Object> map = new HashMap<String,Object>();
 		List<Lend> lends = queryAllByLend(lend);
-		if(lends.isEmpty()){map.put("error", "Çë¼ì²éISBNºÍ½èÔÄºÅ");return map;}
+		if(lends.isEmpty()){map.put("error", "è¯·æ£€æŸ¥ISBNå’Œå€Ÿé˜…å·");return map;}
 		String delete = "delete from lend where lendid = ?";
 		String update = "update lend set num = ? where lendid = ?";
 		String update2 = "update book set snum = snum + ? where isbn = ?";
 		int total = 0;
 		for(Lend l:lends) {total = total + l.getNum();}
 		System.out.println(total);
-		if(total - lend.getNum() < 0){map.put("error", "Çë¼ì²éÊıÁ¿");return map;}
+		if(total - lend.getNum() < 0){map.put("error", "è¯·æ£€æŸ¥æ•°é‡");return map;}
 		Lend back = new Lend();
 		Book b =new Book();
 		back.setBook(b);

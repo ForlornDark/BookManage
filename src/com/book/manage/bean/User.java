@@ -5,11 +5,11 @@ package com.book.manage.bean;
  *
  */
 public class User {
-	//¹ÜÀíÔ±ID
+	//ç®¡ç†å‘˜ID
 	private int id;
-	//¹ÜÀíÔ±Ãû×Ö
+	//ç®¡ç†å‘˜åå­—
 	private String name;
-	//¹ÜÀíÔ±ÃÜÂë
+	//ç®¡ç†å‘˜å¯†ç 
 	private String password;
 	private byte role;
 	public int getId() {

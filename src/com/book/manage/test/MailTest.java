@@ -13,14 +13,14 @@ public class MailTest {
 		int t = r.nextInt(8999)+1000;
 		System.out.println(t);
 		MailSenderInfo mailInfo = new MailSenderInfo();   
-	     mailInfo.setToAddress("1226007593@qq.com");   ///¶Ô·½µÄÓÊÏä
-	     mailInfo.setSubject("»¶Ó­×¢²áÍ¼Êé¹ÜÀíÏµÍ³¶ÁÕß");   
-	     mailInfo.setContent("±¾´Î×¢²áÑéÖ¤ÂëÊÇ:"+t);
-	     //Õâ¸öÀàÖ÷ÒªÀ´·¢ËÍÓÊ¼ş  
+	     mailInfo.setToAddress("1226007593@qq.com");   ///å¯¹æ–¹çš„é‚®ç®±
+	     mailInfo.setSubject("æ¬¢è¿æ³¨å†Œå›¾ä¹¦ç®¡ç†ç³»ç»Ÿè¯»è€…");   
+	     mailInfo.setContent("æœ¬æ¬¡æ³¨å†ŒéªŒè¯ç æ˜¯:"+t);
+	     //è¿™ä¸ªç±»ä¸»è¦æ¥å‘é€é‚®ä»¶  
 	     SimpleMailSender sms = new SimpleMailSender();  
-	     if(sms.sendTextMail(mailInfo)){    //·¢ËÍÎÄÌå¸ñÊ½   
-	    	 System.out.println("·¢ËÍ³É¹¦£¡");
+	     if(sms.sendTextMail(mailInfo)){    //å‘é€æ–‡ä½“æ ¼å¼   
+	    	 System.out.println("å‘é€æˆåŠŸï¼");
 	     }
-	  //   sms.sendHtmlMail(mailInfo);//·¢ËÍhtml¸ñÊ½
+	  //   sms.sendHtmlMail(mailInfo);//å‘é€htmlæ ¼å¼
 	}
 }

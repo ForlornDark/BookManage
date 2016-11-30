@@ -17,11 +17,11 @@ public class QueryReader extends ActionSupport{
 	/**
 	 * 
 	 */
-	//²éÑ¯½á¹û×´Ì¬ĞÅÏ¢
+	//æŸ¥è¯¢ç»“æœçŠ¶æ€ä¿¡æ¯
 	private String state;
-	//²éÑ¯½á¹û
+	//æŸ¥è¯¢ç»“æœ
 	private List<Reader> readers;
-	//²éÑ¯µÄ²ÎÊı£¬¶ÁÕßID
+	//æŸ¥è¯¢çš„å‚æ•°ï¼Œè¯»è€…ID
 	private String param;
 	private static final long serialVersionUID = 6085602299054684400L;
 	@Override
@@ -30,7 +30,7 @@ public class QueryReader extends ActionSupport{
 		ReaderDao dao = new ReaderDao();
 		readers = dao.qureyByParam(param);
 		if(readers.size()==0)
-			state="ÎŞ²éÑ¯¼ÇÂ¼£¬Çë¼ì²éID";
+			state="æ— æŸ¥è¯¢è®°å½•ï¼Œè¯·æ£€æŸ¥ID";
 		return super.execute();
 	}
 	

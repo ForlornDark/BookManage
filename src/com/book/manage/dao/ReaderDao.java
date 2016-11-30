@@ -45,7 +45,7 @@ public class ReaderDao {
 	}
 	/**
 	 * 
-	 * @param param ÓÃ»§id»òÃû×Ö
+	 * @param param ç”¨æˆ·idæˆ–åå­—
 	 * @return
 	 * @throws SQLException
 	 */
@@ -89,10 +89,10 @@ public class ReaderDao {
 				SaveFile.deleteFile(reader.getPhoto());
 				String sql = "delete from reader where readerId = ?";
 				if(runner.update(sql, id)>0)
-					result = "É¾³ıID"+id+"³É¹¦";
-			}else result = "ÇëÈ·ÈÏID";
+					result = "åˆ é™¤ID"+id+"æˆåŠŸ";
+			}else result = "è¯·ç¡®è®¤ID";
 		}else
-			result = "ÓĞÎ´»¹Êé";
+			result = "æœ‰æœªè¿˜ä¹¦";
 		System.out.println(result);
 		return result;
 	}

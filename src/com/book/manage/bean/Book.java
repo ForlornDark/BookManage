@@ -7,25 +7,25 @@ import java.sql.Blob;
  *
  */
 public class Book{
-	//Í¼ÊéISBN
+	//å›¾ä¹¦ISBN
 	private String ISBN;
-	//Í¼ÊéÃû
+	//å›¾ä¹¦å
 	private String bookName;
-	//Í¼Êéid
+	//å›¾ä¹¦id
 	//private String bookId;
-	//Í¼Êé×÷Õß
+	//å›¾ä¹¦ä½œè€…
 	private String author;
-	//Í¼Êé³ö°æÉç
+	//å›¾ä¹¦å‡ºç‰ˆç¤¾
 	private String publisher;
-	//Í¼Êé¼Û¸ñ
+	//å›¾ä¹¦ä»·æ ¼
 	private float price;
-	//¸´±¾Á¿,¸´±¾Á¿=¿â´æÁ¿+ÒÑ½èÔÄ
+	//å¤æœ¬é‡,å¤æœ¬é‡=åº“å­˜é‡+å·²å€Ÿé˜…
 	private int cnum;
-	//¿â´æÁ¿
+	//åº“å­˜é‡
 	private int snum;
-	//Í¼ÊéÃèÊö
+	//å›¾ä¹¦æè¿°
 	private String summary;
-	//Í¼Êé·âÃæÍ¼Æ¬Â·¾¶£¬ÒÔÍ¼Æ¬¸ñÊ½´æ´¢ÔÚweb/inf/resourcesÏÂ
+	//å›¾ä¹¦å°é¢å›¾ç‰‡è·¯å¾„ï¼Œä»¥å›¾ç‰‡æ ¼å¼å­˜å‚¨åœ¨web/inf/resourcesä¸‹
 	private String path;
 	
 	public String getISBN() {

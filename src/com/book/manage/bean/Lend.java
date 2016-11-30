@@ -7,17 +7,17 @@ import java.util.Date;
  *
  */
 public class Lend {
-	//½èÔÄid,ÓÉÊı¾İ¿âĞòÁĞ²úÉú
+	//å€Ÿé˜…id,ç”±æ•°æ®åº“åºåˆ—äº§ç”Ÿ
 	private int lenId;
-	//¶ÁÕßID
+	//è¯»è€…ID
 	private int readerId;
-	//Ëù½èÊéµÄISBN
+	//æ‰€å€Ÿä¹¦çš„ISBN
 	private String ISBN;
-	//½èÊéÊ±¼ä
+	//å€Ÿä¹¦æ—¶é—´
 	private Date time;
-	//½èÊéÊıÁ¿
+	//å€Ÿä¹¦æ•°é‡
 	private int num;
-	//½èÊé£¬ÊéµÄÏêÏ¸ĞÅÏ¢
+	//å€Ÿä¹¦ï¼Œä¹¦çš„è¯¦ç»†ä¿¡æ¯
 	private Book book;
 	//private Boolean isBack;
 	public int getLenId() {

@@ -47,14 +47,14 @@ public void testUpdate(){
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
-	System.out.println("Íê±Ï");
+	System.out.println("å®Œæ¯•");
 }
 
 public void testFor(){
 	List<Book> lists = new ArrayList<Book>();
 	for(int i = 0;i<5;i++){
 		Book b = new Book();
-		b.setAuthor("Äã"+i);
+		b.setAuthor("ä½ "+i);
 		lists.add(b);
 	} 
 	Book b = lists.get(0);
@@ -62,7 +62,7 @@ public void testFor(){
 		System.out.println(true);
 	else
 		System.out.println(false);
-	b.setAuthor("¸Ä±äºó");
+	b.setAuthor("æ”¹å˜åŽ");
 	System.out.println(lists.get(0).getAuthor());
 }
 

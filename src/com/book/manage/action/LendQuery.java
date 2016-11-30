@@ -16,18 +16,18 @@ public class LendQuery extends ActionSupport{
 	 * 
 	 */
 	private static final long serialVersionUID = -3252649536972207290L;
-	//²éÑ¯½á¹û
+	//æŸ¥è¯¢ç»“æœ
 	private List<Lend> list;
-	//½èÔÄID
+	//å€Ÿé˜…ID
 	private int id;
-	//²éÑ¯½á¹û×´Ì¬¡£
+	//æŸ¥è¯¢ç»“æœçŠ¶æ€ã€‚
 	private String state;
 	@Override
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
 		list = new LendDao().queryById(id);
 		if(list.size()==0)
-			state="Ã»ÓĞ¼ÇÂ¼";
+			state="æ²¡æœ‰è®°å½•";
 		return super.execute();
 	}
 	public List<Lend> getList() {

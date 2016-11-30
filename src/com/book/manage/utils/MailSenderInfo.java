@@ -1,16 +1,16 @@
 package com.book.manage.utils;
 import java.util.Properties;
 public class MailSenderInfo {
-    // ÓÊ¼ş½ÓÊÕÕßµÄµØÖ·   
+    // é‚®ä»¶æ¥æ”¶è€…çš„åœ°å€   
     private String toAddress;   
-    // µÇÂ½ÓÊ¼ş·¢ËÍ·şÎñÆ÷µÄÓÃ»§ÃûºÍÃÜÂë   
+    // ç™»é™†é‚®ä»¶å‘é€æœåŠ¡å™¨çš„ç”¨æˆ·åå’Œå¯†ç    
     private String subject;   
-    // ÓÊ¼şµÄÎÄ±¾ÄÚÈİ   
+    // é‚®ä»¶çš„æ–‡æœ¬å†…å®¹   
     private String content;   
-    // ÓÊ¼ş¸½¼şµÄÎÄ¼şÃû   
+    // é‚®ä»¶é™„ä»¶çš„æ–‡ä»¶å   
     private String[] attachFileNames;     
     /**  
-      * »ñµÃÓÊ¼ş»á»°ÊôĞÔ  
+      * è·å¾—é‚®ä»¶ä¼šè¯å±æ€§  
       */   
     public Properties getProperties(){
     	 Properties p = new Properties();   

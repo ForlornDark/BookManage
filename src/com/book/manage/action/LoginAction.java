@@ -16,12 +16,12 @@ import com.opensymphony.xwork2.ActionSupport;
  *
  */
 public class LoginAction extends ActionSupport {
-	//¹ÜÀíÔ±·â×°¶ÔÏó
+	//ç®¡ç†å‘˜å°è£…å¯¹è±¡
 	private User user;
-	//µÇÂ½½á¹ûĞÅÏ¢
+	//ç™»é™†ç»“æœä¿¡æ¯
 	private String msg;
 	/**
-	 * ´¦ÀíµÇÂ¼Óë×¢²á¹ÜÀíÔ±
+	 * å¤„ç†ç™»å½•ä¸æ³¨å†Œç®¡ç†å‘˜
 	 */
 	private static final long serialVersionUID = 1L;
 	@Override
@@ -30,7 +30,7 @@ public class LoginAction extends ActionSupport {
 		UserDao dao = new UserDao();
 		User u = dao.queryUser(user);
 		if( u == null){
-			setMsg("ÕË»§»òÃÜÂë´íÎó");
+			setMsg("è´¦æˆ·æˆ–å¯†ç é”™è¯¯");
 			return "error";
 		}
 		Map<String, Object> map = ActionContext.getContext().getSession();

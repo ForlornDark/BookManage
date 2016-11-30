@@ -17,19 +17,19 @@ public class BookQuery extends ActionSupport{
 	private List<Book> list;
 	private static final long serialVersionUID = 1L;
 	private String param =null;
-	//²éÑ¯½á¹û×´Ì¬
+	//æŸ¥è¯¢ç»“æœçŠ¶æ€
 	private String state ;
-	//·ÖÒ³ĞÅÏ¢
+	//åˆ†é¡µä¿¡æ¯
 	private Page<List<Book>> page;
 	@Override
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
 		new BookDao().queryByPage(page);
 		if(page.getResult()==null||page.getResult().size()==0)
-			state="ÎŞËÑË÷½á¹û£¬Çë¸Ä±äËÑË÷¹Ø¼ü´Ê";
+			state="æ— æœç´¢ç»“æœï¼Œè¯·æ”¹å˜æœç´¢å…³é”®è¯";
 //		list = new BookDao().queryByNaAu(param);
 //		if(list.size()==0)
-//			state = "ÎŞËÑË÷½á¹û";
+//			state = "æ— æœç´¢ç»“æœ";
 		return super.execute();
 	}
 	

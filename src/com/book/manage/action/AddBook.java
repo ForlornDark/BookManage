@@ -16,13 +16,13 @@ public class AddBook extends ActionSupport{
 	 * 
 	 */
 	private static final long serialVersionUID = -3564363930759618822L;
-	//Í¼ÊéĞÅÏ¢
+	//å›¾ä¹¦ä¿¡æ¯
 	private Book book;
-	//Í¼Êé»º³å·âÃæ£¬Í¼Æ¬
+	//å›¾ä¹¦ç¼“å†²å°é¢ï¼Œå›¾ç‰‡
 	private File photo;
-	//Í¼ÊéÍ¼Æ¬Ãû
+	//å›¾ä¹¦å›¾ç‰‡å
 	private String photoFileName;
-	//Í¼ÊéÍ¼Æ¬ÀàĞÍ
+	//å›¾ä¹¦å›¾ç‰‡ç±»å‹
 	private String photoContentType;
 	@Override
 	public String execute() throws Exception {

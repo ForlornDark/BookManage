@@ -13,9 +13,9 @@ public class DeleteBook extends ActionSupport{
 	/**
 	 * 
 	 */
-	//删除结果信息
+	//鍒犻櫎缁撴灉淇℃伅
 	private String state;
-	//删除的图书ISBN
+	//鍒犻櫎鐨勫浘涔SBN
 	private String ISBN;
 	private static final long serialVersionUID = 4410908701972116153L;
 	@Override

@@ -24,23 +24,23 @@ import com.opensymphony.xwork2.ActionSupport;
  *
  */
 public class AddReader extends ActionSupport{
-	//ÉúÈÕ£¬Äê
+	//ç”Ÿæ—¥ï¼Œå¹´
 	private int year;
-	//ÉúÈÕ£¬ÔÂ
+	//ç”Ÿæ—¥ï¼Œæœˆ
 	private int month;
-	//ÉúÈÕ£¬Ìì
+	//ç”Ÿæ—¥ï¼Œå¤©
 	private int day;
-	//¶ÁÕß»º´æÍ¼Æ¬·â×°Àà
+	//è¯»è€…ç¼“å­˜å›¾ç‰‡å°è£…ç±»
 	private File photo;
-	//Í¼Æ¬Ãû
+	//å›¾ç‰‡å
 	private String photoFileName;
-	//·â×°µÄ¶ÁÕßĞÅÏ¢
+	//å°è£…çš„è¯»è€…ä¿¡æ¯
 	private Reader reader;
-	//Í¼Æ¬ÀàĞÍ
+	//å›¾ç‰‡ç±»å‹
 	private String photoContentType;
-	//Í¼Æ¬ÑéÖ¤Âë
+	//å›¾ç‰‡éªŒè¯ç 
 	private int checkcode;
-	//ÌáÊ¾´¦Àí½á¹û
+	//æç¤ºå¤„ç†ç»“æœ
 	private String state;
 	/**
 	 * 
@@ -52,7 +52,7 @@ public class AddReader extends ActionSupport{
 		int code = (int) ActionContext.getContext().getSession().get(reader.getMail());
 		ActionContext.getContext().getSession().remove(reader.getMail());
 		if(code!=checkcode){
-			state="ÑéÖ¤ÂëÊäÈë²»ÕıÈ·£¬×¢²áÊ§°Ü";
+			state="éªŒè¯ç è¾“å…¥ä¸æ­£ç¡®ï¼Œæ³¨å†Œå¤±è´¥";
 			return SUCCESS;
 		}
 		reader.setBorn(DateUtil.parse(year+"-"+month+"-"+day));

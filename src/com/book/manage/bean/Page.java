@@ -1,17 +1,17 @@
 package com.book.manage.bean;
 
 public class Page<T> {
-	//×ÜÊı
+	//æ€»æ•°
 	private int count;
-	//·ÖÒ³´óĞ¡
+	//åˆ†é¡µå¤§å°
 	private static int blockSize = 8;
-	//·ÖÒ³µÄµ¥Ò³½á¹û
+	//åˆ†é¡µçš„å•é¡µç»“æœ
 	private T result;
-	//·ÖÒ³µÄË÷Òı
+	//åˆ†é¡µçš„ç´¢å¼•
 	private String index;
-	//ËùÔÚÒ³Êı
+	//æ‰€åœ¨é¡µæ•°
 	private int pageCount;
-	//×î´óÒ³Êı
+	//æœ€å¤§é¡µæ•°
 	private int maxPage;
 	public int getCount() {
 		return count;

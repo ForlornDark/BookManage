@@ -12,7 +12,7 @@ public class LendBook extends ActionSupport{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	//½èÔÄĞÅÏ¢
+	//å€Ÿé˜…ä¿¡æ¯
 	private Lend lend;
 	@Override
 	public String execute() throws Exception {

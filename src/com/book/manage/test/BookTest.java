@@ -14,7 +14,7 @@ public class BookTest {
 	public void testQueryCount(){
 		BookDao dao = new BookDao();
 		try {
-			System.out.println(dao.queryCount("%¹ù¿Ë»ª%"));
+			System.out.println(dao.queryCount("%éƒ­å…‹å%"));
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -24,7 +24,7 @@ public class BookTest {
 	public void testQueryByPage(){
 		BookDao dao = new BookDao();
 		Page<List<Book>> page = new Page<List<Book>>();
-		page.setIndex("Èí¼ş¹¤³Ì");
+		page.setIndex("è½¯ä»¶å·¥ç¨‹");
 		page.setPageCount(1);
 		page.setBlockSize(5);
 		try {
@@ -41,7 +41,7 @@ public class BookTest {
 	public void testQueryByNameOrAuthor(){
 		BookDao dao = new BookDao();
 		try {
-			List<Book> bs = dao.queryByNaAu("¼ÆËã»úÍøÂç");
+			List<Book> bs = dao.queryByNaAu("è®¡ç®—æœºç½‘ç»œ");
 			for(Book b:bs){
 				System.out.println(b.getBookName());
 			}
