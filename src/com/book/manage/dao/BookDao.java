@@ -65,7 +65,7 @@ public class BookDao {
 					b.setPrice(set.getFloat(5));
 					b.setCnum(set.getInt(6));
 					b.setSnum(set.getInt(7));
-					b.setPath(set.getString(9));
+					b.setPath(set.getString(8));
 				}
 				return b;
 			}}, ISBN);

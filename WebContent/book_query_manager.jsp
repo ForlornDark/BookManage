@@ -72,7 +72,7 @@
 					<input type="hidden" name="page.index" value="${page.index}" >
 					<input type="number" autocomplete="off"name="page.pageCount" size="3">&nbsp&nbsp<button type="submit" class="btn btn-primary">跳转</button>&nbsp&nbsp<span>${page.pageCount}页 / ${page.maxPage}页</span>
 				</form>
-			</div>
+	</div>
 	</s:if>
 </body>
 </html>
