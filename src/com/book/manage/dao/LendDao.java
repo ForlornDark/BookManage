@@ -85,7 +85,7 @@ public class LendDao {
 	}
 	public Map<String,Object> backBook(Lend lend) throws SQLException{
 		Map<String,Object> map = new HashMap<String,Object>();
-		List<Lend> lends = queryAllByLend(lend);
+		List<Lend> lends = queryById(lend.getReaderId());
 		if(lends.isEmpty()){map.put("error", "请检查ISBN和借阅号");return map;}
 		String delete = "delete from lend where lendid = ?";
 		String update = "update lend set num = ? where lendid = ?";

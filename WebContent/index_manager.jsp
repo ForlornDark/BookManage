@@ -81,6 +81,7 @@
 	</div>
 	<div class="right">
 		<iframe id="rightFrame" name="rightFrame" width="100%" height="100%"
+		src="lend_book.jsp"
 			scrolling="auto" marginheight="0" marginwidth="0" align="middle"
 			style="border: 0px solid #CCC; margin: 0; padding: 0;"></iframe>
 	</div>

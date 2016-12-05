@@ -22,11 +22,11 @@
 		<s:form theme="simple" action="login" method="post" onsubmit="return check()">
 		<p style="padding: 30px 0px 10px; position: relative;">
 			<span class="u_logo"></span> 
-			<input class="ipt" id="id" type="text" pattern="^[0-9]*$" placeholder="请输入数字ID" name="user.id">
+			<input class="ipt" autocomplete="off" id="id" type="text" pattern="^[0-9]*$" placeholder="请输入数字ID" name="user.id">
 		</p>
 		<p style="position: relative;">
 			<span class="p_logo"></span> 
-			<input class="ipt" id="password" type="password" placeholder="请输入密码" name="user.password">
+			<input class="ipt" autocomplete="off" id="password" type="password" placeholder="请输入密码" name="user.password">
 		</p>
 		<div style="height: 50px; line-height: 50px; margin-top: 30px; border-top-color: rgb(231, 231, 231); border-top-width: 1px; border-top-style: solid;">
 			<p style="margin: 0px 35px 20px 45px;">
